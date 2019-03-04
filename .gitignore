@@ -1,6 +1,8 @@
 # Custom
 /tmp/
+/.tmp/
 /trash/
+/.trash/
 
 # Prerequisites
 *.d
