@@ -1,0 +1,15 @@
+# First to check
+-> colors with {} and other formats
+-> colors with %y and %#y (console codes)
+-> colors with %Y and %#Y (rgb)
+-> %n
+-> flag $
+-> flag *
+-> %b and %B
+-> %r
+# Also added, without interest
+-> other functions (printf, asprintf, dprintf, vprintf, vasprintf, vdprintf)
+-> %S
+-> %C
+-> display of unknown conversion the way printf do
+-> flags j, t and z
