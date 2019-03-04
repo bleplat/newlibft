@@ -6,7 +6,7 @@
 /*   By: bleplat <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/07 10:59:30 by bleplat           #+#    #+#             */
-/*   Updated: 2019/03/04 14:53:44 by bleplat          ###   ########.fr       */
+/*   Updated: 2019/03/04 22:58:46 by bleplat          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -256,5 +256,7 @@ t_ullint		ft_va_as_ulonglong(va_list ap);
 int				ft_welcome(void);
 int				ft_goodbye(void);
 const void		*ft_pushpop(const void *to_push);
+int				ft_pause(void);
+int				ft_readtonl(int fd, char **p_dst, int max_line_size);
 
 #endif

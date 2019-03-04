@@ -1,32 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_readline_demo.c                                 :+:      :+:    :+:   */
+/*   ft_readtonl_demo.c                                 :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: bleplat <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/03/04 14:59:34 by bleplat           #+#    #+#             */
-/*   Updated: 2019/03/04 22:35:04 by bleplat          ###   ########.fr       */
+/*   Created: 2019/03/04 22:31:09 by bleplat           #+#    #+#             */
+/*   Updated: 2019/03/04 23:16:14 by bleplat          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include <fcntl.h>
+
 #include "libft.h"
-#include "libft_readline.h"
 
 int				loop(int fd)
 {
-	int		color;
-	char	*line;
-	int		rst;
+	char		*line;
+	int			rst;
 
-	while ((rst = ft_readline(fd, &line)) > 0)
+	while ((rst = ft_readtonl(fd, &line, 16)) >= 0)
 	{
-		color = (ft_urandom() + 256) % 256;
-		ft_printf("%y(%d) %s", color, rst, line);
+		ft_printf("[rst == %2d] %s", rst, line);
 	}
-	if (rst < 0)
-		ft_printf("{red}{bold}{italic}rst == %d\n", rst);
-	ft_readline(fd, (void*)0);
+	ft_printf("[rst == %2d]", rst);
+	return (0);
 }
 
 int				main(int argc, char **argv)
@@ -39,7 +37,7 @@ int				main(int argc, char **argv)
 		fd = open(argv[1], O_RDONLY);
 	if (argc > 2 || fd < 0)
 	{
-		ft_dprintf(2, "{red}ERROR{}\n");
+		ft_dprintf(2, "{red}ERROR\n");
 		return (1);
 	}
 	loop(fd);

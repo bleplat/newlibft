@@ -6,13 +6,15 @@
 #    By: bleplat <marvin@42.fr>                     +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2018/11/07 09:05:04 by bleplat           #+#    #+#              #
-#    Updated: 2019/03/04 18:34:09 by bleplat          ###   ########.fr        #
+#    Updated: 2019/03/04 22:58:30 by bleplat          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME = libft.a
 
 FNT = ft_welcome \
+		ft_pause \
+		ft_readtonl \
 		ft_readline \
 		ft_strpopnls \
 		ft_random \
