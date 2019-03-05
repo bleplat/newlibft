@@ -6,11 +6,26 @@
 /*   By: bleplat <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/03/05 16:46:37 by bleplat           #+#    #+#             */
-/*   Updated: 2019/03/05 16:59:26 by bleplat          ###   ########.fr       */
+/*   Updated: 2019/03/05 21:00:24 by bleplat          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+
+int				usage(char *program_name)
+{
+	ft_printf("Usage: %s ", program_name);
+	ft_putstr("min count [step] [shuffle] [sep]\n");
+	ft_putstr("\tmin\tMinimum number to output.\n");
+	ft_putstr("\tcount\tHow many numbers to output.\n");
+	ft_putstr("\tstep\tInterval between each number.\n");
+	ft_putstr("\tshuffle\tHow to shuffle, determined by the given number:\n");
+	ft_putstr("\t\t\tn < 0: shuffle the whole list.\n");
+	ft_putstr("\t\t\tn = 0: no shuffle.\n");
+	ft_putstr("\t\t\tn > 0: perform n random shuffle.\n");
+	ft_putstr("\tsep\tString used as a separator. Default ' '.\n");
+	return (1);
+}
 
 int				main(int argc, char **argv)
 {
@@ -18,16 +33,21 @@ int				main(int argc, char **argv)
 	int		count;
 	int		step;
 	int		*ints;
+	int		shuffle;
 
 	if (argc < 3)
-		return (1);
+		return (usage(argv[0]));
 	min = ft_atoi(argv[1]);
 	count = ft_atoi(argv[2]);
 	step = (argc > 3) ? ft_atoi(argv[3]) : 1;
 	if (!(ints = ft_intsrange(min, count, step)))
 		return (2);
-	if ((argc > 4) && argv[4][0] == '1')
+	shuffle = (argc > 4) ? ft_atoi(argv[4]) : 0;
+	if (shuffle < 0)
 		ft_intsshuffle(ints, count);
+	else
+		ft_intsnshuffle(ints, count, shuffle);
 	ft_putints(ints, count, (argc > 5) ? argv[5] : " ");
+	free(ints);
 	return (0);
 }
