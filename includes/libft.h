@@ -6,7 +6,7 @@
 /*   By: bleplat <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/07 10:59:30 by bleplat           #+#    #+#             */
-/*   Updated: 2019/03/05 20:50:53 by bleplat          ###   ########.fr       */
+/*   Updated: 2019/03/05 21:52:55 by bleplat          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -144,6 +144,7 @@ void			ft_putints(const int *array, int count, const char *sep);
 ** C o n v e r t i o n
 */
 
+int				ft_atoi32check(int *out, const char *str);
 char			*ft_lltoa(long long int n);
 char			*ft_ulltoa_basestr(unsigned long long int n, char *base_str);
 char			*ft_ldtoa(long double d, unsigned int precision);

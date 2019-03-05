@@ -6,12 +6,15 @@
 /*   By: bleplat <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/12/03 17:26:21 by bleplat           #+#    #+#             */
-/*   Updated: 2019/02/12 12:18:46 by bleplat          ###   ########.fr       */
+/*   Updated: 2019/03/05 21:41:50 by bleplat          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef LIBFT_INTDEFS_H
 # define LIBFT_INTDEFS_H
+
+# define FT_INT32_MIN -2147483648
+# define FT_INT32_MAX 0x7FFFFFFF
 
 typedef char								t_sbyte;
 typedef unsigned char						t_ubyte;

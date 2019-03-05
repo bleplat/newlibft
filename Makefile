@@ -6,7 +6,7 @@
 #    By: bleplat <marvin@42.fr>                     +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2018/11/07 09:05:04 by bleplat           #+#    #+#              #
-#    Updated: 2019/03/05 20:51:05 by bleplat          ###   ########.fr        #
+#    Updated: 2019/03/05 21:52:08 by bleplat          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -26,6 +26,7 @@ FNT = ft_welcome \
 		ft_llrandom \
 		ft_ullrandom \
 		ft_atoi \
+		ft_atoi32check \
 		ft_bzero \
 		ft_free_vectors \
 		ft_isalnum \
