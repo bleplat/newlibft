@@ -6,7 +6,7 @@
 /*   By: bleplat <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/03/05 16:46:37 by bleplat           #+#    #+#             */
-/*   Updated: 2019/03/05 21:00:24 by bleplat          ###   ########.fr       */
+/*   Updated: 2019/03/05 22:05:51 by bleplat          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,6 +26,10 @@ int				usage(char *program_name)
 	ft_putstr("\tsep\tString used as a separator. Default ' '.\n");
 	return (1);
 }
+
+/*
+** Program to create an integer list, and shuffle it, whole, or more or less.
+*/
 
 int				main(int argc, char **argv)
 {
