@@ -6,7 +6,7 @@
 #    By: bleplat <marvin@42.fr>                     +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2018/11/07 09:05:04 by bleplat           #+#    #+#              #
-#    Updated: 2019/03/04 22:58:30 by bleplat          ###   ########.fr        #
+#    Updated: 2019/03/05 16:54:17 by bleplat          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -16,6 +16,9 @@ FNT = ft_welcome \
 		ft_pause \
 		ft_readtonl \
 		ft_readline \
+		ft_intsshuffle \
+		ft_intsrange \
+		ft_putints \
 		ft_strpopnls \
 		ft_random \
 		ft_urandom \
