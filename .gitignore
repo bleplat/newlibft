@@ -3,6 +3,7 @@
 /.tmp/
 /trash/
 /.trash/
+/*/demo/
 
 # Prerequisites
 *.d
