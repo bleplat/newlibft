@@ -6,13 +6,13 @@
 /*   By: bleplat <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/03/05 16:51:15 by bleplat           #+#    #+#             */
-/*   Updated: 2019/03/05 16:53:42 by bleplat          ###   ########.fr       */
+/*   Updated: 2019/03/05 18:22:39 by bleplat          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void		ft_putints(int *array, int count, const char *sep)
+void		ft_putints(const int *array, int count, const char *sep)
 {
 	int		i_int;
 
