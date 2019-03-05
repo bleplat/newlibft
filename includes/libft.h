@@ -6,7 +6,7 @@
 /*   By: bleplat <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/07 10:59:30 by bleplat           #+#    #+#             */
-/*   Updated: 2019/03/05 21:52:55 by bleplat          ###   ########.fr       */
+/*   Updated: 2019/03/05 23:53:46 by bleplat          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -139,6 +139,7 @@ int				*ft_intsrange(int min, int count, int step);
 void			ft_intsshuffle(int *array, int count);
 void			ft_intsnshuffle(int *array, int count, int shuffles_count);
 void			ft_putints(const int *array, int count, const char *sep);
+void			ft_swapint(int *a, int *b);
 
 /*
 ** C o n v e r t i o n
