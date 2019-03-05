@@ -6,11 +6,15 @@
 /*   By: bleplat <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/12/01 14:19:47 by bleplat           #+#    #+#             */
-/*   Updated: 2018/12/01 14:26:13 by bleplat          ###   ########.fr       */
+/*   Updated: 2019/03/05 21:30:14 by bleplat          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+
+/*
+** Check if this string represent a number.
+*/
 
 int				ft_isstrnum(const char *str)
 {
@@ -20,6 +24,8 @@ int				ft_isstrnum(const char *str)
 		return (0);
 	i = 0;
 	if (str[i] == '-')
+		i++;
+	else if (str[i] == '+')
 		i++;
 	while (str[i] != '\0')
 	{
