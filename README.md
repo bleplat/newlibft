@@ -2,6 +2,9 @@
 Just another libft.
 Take a look at the demo folder to see what it can achieve.
 
+# Demo files
+Folder 'demo' contains sources, not part of the library, but demonstrating the use of some functions.
+
 # Features / Functions
 This list is not finished.
 Lot of functions are unlisted.
