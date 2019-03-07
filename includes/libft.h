@@ -6,7 +6,7 @@
 /*   By: bleplat <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/07 10:59:30 by bleplat           #+#    #+#             */
-/*   Updated: 2019/03/05 23:53:46 by bleplat          ###   ########.fr       */
+/*   Updated: 2019/03/07 14:40:38 by bleplat          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,6 +27,8 @@
 
 # include "get_next_line.h"
 # include "ft_printf.h"
+
+# define FT_PI 3.14159265359
 
 # define FT_FREETASK_1ST 0x1
 # define FT_FREETASK_2ND 0x2
@@ -140,6 +142,8 @@ void			ft_intsshuffle(int *array, int count);
 void			ft_intsnshuffle(int *array, int count, int shuffles_count);
 void			ft_putints(const int *array, int count, const char *sep);
 void			ft_swapint(int *a, int *b);
+double			ft_dclamp(doiuble x, double min, double max);
+double			ft_dmix(double x, double y, double a);
 
 /*
 ** C o n v e r t i o n
