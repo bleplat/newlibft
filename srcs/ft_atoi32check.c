@@ -6,7 +6,7 @@
 /*   By: bleplat <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/07 11:51:15 by bleplat           #+#    #+#             */
-/*   Updated: 2019/03/05 21:54:40 by bleplat          ###   ########.fr       */
+/*   Updated: 2019/03/10 21:56:28 by bleplat          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,14 +35,14 @@ int			ft_atoi32check(int *out, const char *str)
 
 	i = 0;
 	sign = 1;
-	if (str[i] == '-')
+	if (str[i] == '-' || str[i] == '+')
 	{
-		sign = -1;
+		sign = (str[i] == '-') ? -1 : 1;
 		i++;
 	}
-	else if (str[i] == '+')
-		i++;
 	total = 0;
+	if (str[i] == '\0')
+		return (-1);
 	while (str[i] != '\0')
 	{
 		if (!ft_isdigit(str[i]))
