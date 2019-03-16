@@ -6,7 +6,7 @@
 /*   By: bleplat <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/07 10:59:30 by bleplat           #+#    #+#             */
-/*   Updated: 2019/03/10 21:12:49 by bleplat          ###   ########.fr       */
+/*   Updated: 2019/03/16 18:50:59 by bleplat          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -200,6 +200,8 @@ unsigned char	*ft_wstrtostr(wchar_t *wstr, int max_bytes);
 ** C o l o r s
 */
 
+int				ft_argb(int a, int r, int g, int b);
+int				ft_colorwheel(int degrees);
 char			*ft_ansicolor(int color, int flags);
 char			*ft_hcolortoansi(const char *hcolor);
 

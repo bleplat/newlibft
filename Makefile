@@ -6,7 +6,7 @@
 #    By: bleplat <marvin@42.fr>                     +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2018/11/07 09:05:04 by bleplat           #+#    #+#              #
-#    Updated: 2019/03/07 14:28:34 by bleplat          ###   ########.fr        #
+#    Updated: 2019/03/16 18:51:29 by bleplat          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -172,6 +172,8 @@ FNT = ft_welcome \
 		ft_va_as_ulonglong \
 		ft_wchrtostr \
 		ft_wstrtostr \
+		ft_argb \
+		ft_colorwheel \
 		ft_ansicolor \
 		ft_hcolortoansi \
 		ft_strpop \
