@@ -6,7 +6,7 @@
 #    By: bleplat <marvin@42.fr>                     +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2018/11/07 09:05:04 by bleplat           #+#    #+#              #
-#    Updated: 2019/03/16 18:51:29 by bleplat          ###   ########.fr        #
+#    Updated: 2019/03/16 19:54:14 by bleplat          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -174,6 +174,7 @@ FNT = ft_welcome \
 		ft_wstrtostr \
 		ft_argb \
 		ft_colorwheel \
+		ft_mixcolors \
 		ft_ansicolor \
 		ft_hcolortoansi \
 		ft_strpop \
