@@ -6,7 +6,7 @@
 #    By: bleplat <marvin@42.fr>                     +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2018/11/07 09:05:04 by bleplat           #+#    #+#              #
-#    Updated: 2019/03/16 19:54:14 by bleplat          ###   ########.fr        #
+#    Updated: 2019/04/01 01:41:17 by bleplat          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -233,6 +233,7 @@ optimized: CFLAGS += -o3
 optimized: all
 
 $(NAME): $(OBJ)
+	rm -rf ./*/.git # Safety to prevent gits inside gits, requiered at 42.
 	@printf "\e[92m" || true
 	ar rc $(NAME) $(OBJ)
 	ranlib $(NAME)
