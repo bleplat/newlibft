@@ -1,39 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   libft_files.h                                      :+:      :+:    :+:   */
+/*   ft_filemode.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: bleplat <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/04/01 04:17:22 by bleplat           #+#    #+#             */
-/*   Updated: 2019/04/01 07:00:30 by bleplat          ###   ########.fr       */
+/*   Created: 2019/04/01 06:43:48 by bleplat           #+#    #+#             */
+/*   Updated: 2019/04/01 06:50:48 by bleplat          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef LIBFT_FILES_H
-# define LIBFT_FILES_H
-
-#include <dirent.h>
-#include <errno.h>
-#include <sys/stat.h>
+#include "libft.h"
+#include "libft_files.h"
 
 /*
-** H e l p e r s
+** Get the mode of a file.
 */
 
-char		*ft_strmode(mode_t mode);
-char		*ft_dirfilepath(char *dir, char *file);
+mode_t		ft_filemode(const char *filename)
+{
+	struct stat		file_stats;
 
-/*
-** F i l e s
-*/
-
-mode_t		ft_filemode(const char *filename);
-
-/*
-** D i r e c t o r i e s
-*/
-
-int			ft_listdir(char ***out, const char *dir);
-
-#endif
+	if (lstat(filename, &file_stats) < 0)
+		return (0);
+	return (file_stats.st_mode);
+}
