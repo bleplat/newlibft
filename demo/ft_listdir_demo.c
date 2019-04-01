@@ -6,7 +6,7 @@
 /*   By: bleplat <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/04/01 04:25:28 by bleplat           #+#    #+#             */
-/*   Updated: 2019/04/01 07:08:10 by bleplat          ###   ########.fr       */
+/*   Updated: 2019/04/01 08:14:59 by bleplat          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,6 +20,8 @@ void		advanced(char *dir, char **dir_names)
 {
 	char			*fullpath;
 	const char		*smode;
+	char			*usr;
+	char			*grp;
 
 	while (*dir_names != NULL)
 	{
@@ -28,9 +30,13 @@ void		advanced(char *dir, char **dir_names)
 		else
 		{
 			smode = ft_strmode(ft_filemode(fullpath));
-			ft_printf("%s %s\n", smode, *dir_names);
+			usr = ft_usrname(ft_fileusr(fullpath));
+			grp = ft_grpname(ft_filegrp(fullpath));
+			ft_printf("%s  %s  %s  %s\n", smode, usr, grp, *dir_names);
 			free((void*)fullpath);
 			free((void*)smode);
+			free((void*)usr);
+			free((void*)grp);
 		}
 		dir_names++;
 	}
