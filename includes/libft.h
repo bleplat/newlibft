@@ -6,7 +6,7 @@
 /*   By: bleplat <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/07 10:59:30 by bleplat           #+#    #+#             */
-/*   Updated: 2019/04/01 02:34:40 by bleplat          ###   ########.fr       */
+/*   Updated: 2019/04/01 04:38:29 by bleplat          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,6 +24,7 @@
 # include "libft_intdefs.h"
 # include "libft_array.h"
 # include "libft_readline.h"
+# include "libft_files.h"
 
 # include "get_next_line.h"
 # include "ft_printf.h"
@@ -182,6 +183,9 @@ int				ft_strpop(const char *source, const char *search);
 int				ft_alnumpop(const char *source, const char *s2);
 void			ft_strrev(char *str);
 int				ft_strpopnls(char *str);
+int				ft_putstrvec(const char **vec, int count, const char *sep);
+int				ft_dputstrvec(int fd, const char **vec,
+								int count, const char *sep);
 
 /*
 ** U n i c o d e

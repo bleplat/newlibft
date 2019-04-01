@@ -6,13 +6,16 @@
 #    By: bleplat <marvin@42.fr>                     +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2018/11/07 09:05:04 by bleplat           #+#    #+#              #
-#    Updated: 2019/04/01 02:32:47 by bleplat          ###   ########.fr        #
+#    Updated: 2019/04/01 04:37:25 by bleplat          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME = libft.a
 
 FNT = ft_welcome \
+		ft_dputstrvec \
+		ft_putstrvec \
+		ft_listdir \
 		ft_vecdel \
 		ft_vecdel0 \
 		ft_dclamp \
