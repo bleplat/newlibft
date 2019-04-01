@@ -6,7 +6,7 @@
 /*   By: bleplat <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/07 10:59:30 by bleplat           #+#    #+#             */
-/*   Updated: 2019/04/01 04:38:29 by bleplat          ###   ########.fr       */
+/*   Updated: 2019/04/01 07:30:27 by bleplat          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -275,5 +275,6 @@ int				ft_goodbye(void);
 const void		*ft_pushpop(const void *to_push);
 int				ft_pause(void);
 int				ft_readtonl(int fd, char **p_dst, int max_line_size);
+const char		*ft_cstrmonth(int month);
 
 #endif

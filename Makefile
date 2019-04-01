@@ -6,13 +6,14 @@
 #    By: bleplat <marvin@42.fr>                     +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2018/11/07 09:05:04 by bleplat           #+#    #+#              #
-#    Updated: 2019/04/01 07:00:43 by bleplat          ###   ########.fr        #
+#    Updated: 2019/04/01 07:30:41 by bleplat          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME = libft.a
 
 FNT = ft_welcome \
+		ft_cstrmonth \
 		ft_dirfilepath \
 		ft_filemode \
 		ft_strmode \
