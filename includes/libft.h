@@ -6,7 +6,7 @@
 /*   By: bleplat <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/07 10:59:30 by bleplat           #+#    #+#             */
-/*   Updated: 2019/03/16 19:54:43 by bleplat          ###   ########.fr       */
+/*   Updated: 2019/04/01 02:34:40 by bleplat          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -235,10 +235,10 @@ int				ft_memdel0(void **to_free);
 int				ft_memdel1(void **to_free);
 int				ft_free0(void *to_free);
 int				ft_ptrcount(void **ptr);
-void			ft_free_vectors(void *to_free, int array_layers);
-int				ft_free_vectors0(void *to_free, int layers);
 int				ft_memrealloc(void **mem, size_t *prev_size, size_t new_size);
 void			*ft_memdup(const void *s1, size_t size);
+int				ft_vecdel(void **vec, int deep);
+int				ft_vecdel0(void **vec, int deep);
 
 /*
 ** V a r i a d i c

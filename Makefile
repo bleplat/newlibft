@@ -6,13 +6,15 @@
 #    By: bleplat <marvin@42.fr>                     +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2018/11/07 09:05:04 by bleplat           #+#    #+#              #
-#    Updated: 2019/04/01 01:41:17 by bleplat          ###   ########.fr        #
+#    Updated: 2019/04/01 02:32:47 by bleplat          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME = libft.a
 
 FNT = ft_welcome \
+		ft_vecdel \
+		ft_vecdel0 \
 		ft_dclamp \
 		ft_dmix \
 		ft_pause \
@@ -31,7 +33,6 @@ FNT = ft_welcome \
 		ft_atoi \
 		ft_atoi32check \
 		ft_bzero \
-		ft_free_vectors \
 		ft_isalnum \
 		ft_isalpha \
 		ft_isascii \
@@ -131,7 +132,6 @@ FNT = ft_welcome \
 		ft_memdel1 \
 		ft_free0 \
 		ft_ptrcount \
-		ft_free_vectors0 \
 		ft_isupper \
 		ft_array_new \
 		ft_array_del \

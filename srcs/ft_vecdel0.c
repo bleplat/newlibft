@@ -1,19 +1,19 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_free_vectors0.c                                 :+:      :+:    :+:   */
+/*   ft_vecdel0.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: bleplat <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/12/07 17:15:49 by bleplat           #+#    #+#             */
-/*   Updated: 2018/12/07 17:16:34 by bleplat          ###   ########.fr       */
+/*   Created: 2019/04/01 02:22:11 by bleplat           #+#    #+#             */
+/*   Updated: 2019/04/01 02:22:46 by bleplat          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int			ft_free_vectors0(void *to_free, int layers)
+int			ft_vecdel0(void **vec, int deep)
 {
-	ft_free_vectors(to_free, layers);
+	ft_vecdel(vec, deep);
 	return (0);
 }
