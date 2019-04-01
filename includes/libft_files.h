@@ -6,7 +6,7 @@
 /*   By: bleplat <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/04/01 04:17:22 by bleplat           #+#    #+#             */
-/*   Updated: 2019/04/01 08:14:30 by bleplat          ###   ########.fr       */
+/*   Updated: 2019/04/01 09:10:11 by bleplat          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,8 +21,10 @@
 ** H e l p e r s
 */
 
-char		*ft_strmode(mode_t mode);
 char		*ft_dirfilepath(char *dir, char *file);
+int			ft_strpopslashes(char *path);
+
+char		*ft_strmode(mode_t mode);
 char		*ft_usrname(uid_t uid);
 char		*ft_grpname(gid_t gid);
 

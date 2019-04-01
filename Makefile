@@ -6,13 +6,14 @@
 #    By: bleplat <marvin@42.fr>                     +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2018/11/07 09:05:04 by bleplat           #+#    #+#              #
-#    Updated: 2019/04/01 08:10:59 by bleplat          ###   ########.fr        #
+#    Updated: 2019/04/01 09:10:47 by bleplat          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME = libft.a
 
 FNT = ft_welcome \
+		ft_strpopslashes \
 		ft_fileusr \
 		ft_filegrp \
 		ft_usrname \
