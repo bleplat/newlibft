@@ -31,13 +31,14 @@ This project contains all the libft functions.
 
 ## String
 - Contains the classic libft string related functions.
-- ft_strfuse(): lets you join two string, choosing with a third parameter wich will be free in what cases.
+- ft_strfuse(): Lets you join two string, choosing with a third parameter wich will be free in what cases.
 - ft_isblank(), ft_iscntrl(), ft_isspace(), ft_isxdigit(), ft_isupper().
 - ft_isstrnum().
 - ft_strbegins(), ft_strends(): check if a string start or ends with a given string.
 - ft_strtolower(), ft_strtoupper().
 - ft_strrev().
 - ft_strpopnls(): Pop the last '\n's and return how many were removed. For use with ft_readline() and ft_readtonl().
+- ft_putstrvec(), ft_dputstrvec(): Print an array of strings.
 - Other parsing helpers.
 - Others...
 
@@ -81,7 +82,8 @@ This contains classic libft list functions, and also some other additional helpe
 ## Memory
 - ft_memdel0(): same as ft_memdel() but return 0.
 - ft_free0: Same.
-- ft_free_vectors: Recursively free pointers (cf can fully free the return of ft_strsplit()).
+~- ft_free_vectors: Recursively free pointers (cf can fully free the return of ft_strsplit()).~
+- ft_vecdel(): Free vectors recusively, to cleanly free arrays of multiple dimensions.
 - ft_memdup(): Same as ft_strdup() but with a chunk of memory.
 - ft_memrealloc(): look like realloc().
 - "Autofree" functions. Remember the pointers they create, to destroy them in a single call. See sources for details.
@@ -95,3 +97,6 @@ This contains classic libft list functions, and also some other additional helpe
 - ft_pushpop(): 4 parameters per function is not enough? Then push them and pop them!
 - ft_swap<type>: Swap types from pointers. Only int now cause im lazy.
 - Lot of things.
+
+## Files
+- ft_listdir(): list entries in a directory.
