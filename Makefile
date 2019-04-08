@@ -6,7 +6,7 @@
 #    By: bleplat <marvin@42.fr>                     +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2018/11/07 09:05:04 by bleplat           #+#    #+#              #
-#    Updated: 2019/04/01 09:54:52 by bleplat          ###   ########.fr        #
+#    Updated: 2019/04/08 19:50:01 by bleplat          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -225,17 +225,23 @@ FNT = ft_welcome \
 		ft_printf_rstparts_clean \
 		ft_goodbye
 
+CC = gcc
+
 INCLUDES = includes
 SRC_DIR = srcs
 OBJ_DIR = .obj
 DEP_DIR = $(OBJ_DIR)
+LIB_DIR = libs
 
 CFLAGS = -Wall -Werror -Wextra
 #CFLAGS += -fsanitize=address
 
+LDFLAGS = 
+
 SRC = $(patsubst %, $(SRC_DIR)/%.c, $(FNT))
 OBJ = $(patsubst %, $(OBJ_DIR)/%.o, $(FNT))
 DEP = $(patsubst %, $(DEP_DIR)/%.d, $(FNT))
+LIB = 
 
 
 .PHONY: all
@@ -245,8 +251,8 @@ all: $(NAME)
 optimized: CFLAGS += -o3
 optimized: all
 
-$(NAME): $(OBJ)
-	rm -rf ./*/.git # Safety to prevent gits inside gits, requiered at 42.
+$(NAME): $(LIB) $(OBJ)
+	rm -rf $(LIB_DIR)/*/.git # Safety to prevent gits inside gits, requiered at 42.
 	@printf "\e[92m" || true
 	ar rc $(NAME) $(OBJ)
 	ranlib $(NAME)
@@ -259,7 +265,7 @@ $(OBJ_DIR):
 
 $(OBJ_DIR)/%.o: $(SRC_DIR)/%.c | $(OBJ_DIR)
 	@printf "\e[96m" || true
-	gcc $(CFLAGS) -o $@ -I $(INCLUDES) -c $<
+	$(CC) $(CFLAGS) -o $@ -I $(INCLUDES) -c $<
 	@printf "\e[0m" || true
 
 .PHONY: clean
