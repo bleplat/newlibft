@@ -6,11 +6,14 @@
 /*   By: bleplat <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/02/26 16:13:15 by bleplat           #+#    #+#             */
-/*   Updated: 2019/02/27 20:21:04 by bleplat          ###   ########.fr       */
+/*   Updated: 2019/04/09 18:58:29 by bleplat          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ft_printf_helpers.h"
+#include "libft.h"
+
+#include "ft_printf_defines.h"
+#include "ft_printf_types.h"
 
 /*
 ** See ft_printf_format()

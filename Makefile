@@ -6,13 +6,15 @@
 #    By: bleplat <marvin@42.fr>                     +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2018/11/07 09:05:04 by bleplat           #+#    #+#              #
-#    Updated: 2019/04/08 19:50:01 by bleplat          ###   ########.fr        #
+#    Updated: 2019/04/09 18:42:16 by bleplat          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME = libft.a
 
 FNT = ft_welcome \
+		ft_filecolor \
+		ft_lscolors \
 		ft_linkfolow \
 		ft_strpopslashes \
 		ft_fileusr \

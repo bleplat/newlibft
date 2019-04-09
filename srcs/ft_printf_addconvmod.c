@@ -6,10 +6,13 @@
 /*   By: bleplat <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/01/16 16:19:11 by bleplat           #+#    #+#             */
-/*   Updated: 2019/02/26 18:41:05 by bleplat          ###   ########.fr       */
+/*   Updated: 2019/04/09 19:06:55 by bleplat          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "libft.h"
+
+#include "ft_printf_defines.h"
 #include "ft_printf_helpers.h"
 
 void				ft_printf_addconvmod_dinoux(unsigned int *conv, char **mod)

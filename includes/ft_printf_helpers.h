@@ -6,7 +6,7 @@
 /*   By: bleplat <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/29 17:06:22 by bleplat           #+#    #+#             */
-/*   Updated: 2019/02/28 21:42:24 by bleplat          ###   ########.fr       */
+/*   Updated: 2019/04/09 18:53:12 by bleplat          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,9 +17,9 @@
 # include <stdlib.h>
 # include <stdarg.h>
 
-# include "libft.h"
+# include "libft_array.h"
+# include "libft_types.h"
 
-# include "ft_printf_defines.h"
 # include "ft_printf_types.h"
 
 /*

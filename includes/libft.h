@@ -6,7 +6,7 @@
 /*   By: bleplat <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/07 10:59:30 by bleplat           #+#    #+#             */
-/*   Updated: 2019/04/01 07:30:27 by bleplat          ###   ########.fr       */
+/*   Updated: 2019/04/09 18:46:48 by bleplat          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,12 +16,8 @@
 # include <stdarg.h>
 # include <stddef.h>
 # include <stdint.h>
-# include <stdlib.h>
-# include <string.h>
-# include <unistd.h>
-# include <fcntl.h>
 
-# include "libft_intdefs.h"
+# include "libft_types.h"
 # include "libft_array.h"
 # include "libft_readline.h"
 # include "libft_files.h"

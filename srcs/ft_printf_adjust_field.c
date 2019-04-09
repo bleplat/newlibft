@@ -6,11 +6,16 @@
 /*   By: bleplat <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/01/17 20:34:29 by bleplat           #+#    #+#             */
-/*   Updated: 2019/02/28 22:00:59 by bleplat          ###   ########.fr       */
+/*   Updated: 2019/04/09 19:08:23 by bleplat          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ft_printf_helpers.h"
+#include <stdlib.h>
+
+#include "libft.h"
+
+#include "ft_printf_defines.h"
+#include "ft_printf_types.h"
 
 /*
 ** Handle undetermined cases (according to moulitest) and not behaving the same

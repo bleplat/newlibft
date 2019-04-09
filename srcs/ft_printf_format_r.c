@@ -6,10 +6,13 @@
 /*   By: bleplat <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/02/26 16:13:54 by bleplat           #+#    #+#             */
-/*   Updated: 2019/02/27 20:16:15 by bleplat          ###   ########.fr       */
+/*   Updated: 2019/04/09 19:03:45 by bleplat          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "libft.h"
+
+#include "ft_printf_defines.h"
 #include "ft_printf_helpers.h"
 
 static int	len_needs(t_printf_rstpart *part, char *s_ptr, int max_chars)

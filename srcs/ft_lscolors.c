@@ -1,26 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_printf.h                                        :+:      :+:    :+:   */
+/*   ft_lscolors.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: bleplat <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/11/29 17:06:22 by bleplat           #+#    #+#             */
-/*   Updated: 2019/04/09 18:50:06 by bleplat          ###   ########.fr       */
+/*   Created: 2019/04/08 22:22:44 by bleplat           #+#    #+#             */
+/*   Updated: 2019/04/09 18:42:05 by bleplat          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef FT_PRINTF_H
-# define FT_PRINTF_H
+#include <stdlib.h>
 
-# include <stdarg.h>
+#include "libft.h"
 
-int			ft_printf(const char *format, ...);
-int			ft_dprintf(int fd, const char *format, ...);
-int			ft_asprintf(char **ret, const char *format, ...);
+t_lscolors			ft_lscolors(void)
+{
+	t_lscolors		lscolors;
 
-int			ft_vprintf(const char *format, va_list ap);
-int			ft_vdprintf(int fd, const char *format, va_list ap);
-int			ft_vasprintf(char **ret, const char *format, va_list ap);
-
-#endif
+	lscolors = getenv("LSCOLORS");
+	if (lscolors == NULL || ft_strlen(lscolors) != 22)
+		return ("Gxfxcxdxbxegedabagacad");
+	return (lscolors);
+}

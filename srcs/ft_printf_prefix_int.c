@@ -6,13 +6,16 @@
 /*   By: bleplat <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/01/24 19:29:46 by bleplat           #+#    #+#             */
-/*   Updated: 2019/02/27 20:40:12 by bleplat          ###   ########.fr       */
+/*   Updated: 2019/04/09 19:09:47 by bleplat          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include <stdlib.h>
+
 #include "libft.h"
 
-#include "ft_printf_helpers.h"
+#include "ft_printf_defines.h"
+#include "ft_printf_types.h"
 
 /*
 ** Return the sign prefix char used by a signed conversion.

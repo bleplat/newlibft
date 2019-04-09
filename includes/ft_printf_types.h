@@ -6,12 +6,14 @@
 /*   By: bleplat <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/01/29 16:14:06 by bleplat           #+#    #+#             */
-/*   Updated: 2019/02/27 18:13:34 by bleplat          ###   ########.fr       */
+/*   Updated: 2019/04/09 18:50:28 by bleplat          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef FT_PRINTF_TYPES_H
 # define FT_PRINTF_TYPES_H
+
+# include <stdarg.h>
 
 /*
 ** t_printf_format

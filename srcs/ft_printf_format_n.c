@@ -6,11 +6,14 @@
 /*   By: bleplat <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/01/17 19:53:42 by bleplat           #+#    #+#             */
-/*   Updated: 2019/02/27 21:59:10 by bleplat          ###   ########.fr       */
+/*   Updated: 2019/04/09 18:59:32 by bleplat          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ft_printf_helpers.h"
+#include "libft.h"
+
+#include "ft_printf_defines.h"
+#include "ft_printf_types.h"
 
 /*
 ** Output the number 'cnt' to integer pointed by the address contained in ap.
