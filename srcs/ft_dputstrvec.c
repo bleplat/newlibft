@@ -6,7 +6,7 @@
 /*   By: bleplat <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/04/01 04:28:59 by bleplat           #+#    #+#             */
-/*   Updated: 2019/04/01 04:39:15 by bleplat          ###   ########.fr       */
+/*   Updated: 2019/04/09 19:13:29 by bleplat          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ int			ft_dputstrvec(int fd, const char **vec, int count, const char *sep)
 	while (i < count || count < 0)
 	{
 		if (!vec[i])
-			break;
+			break ;
 		if (i > 0 && sep != NULL)
 			ft_putstr_fd(sep, fd);
 		ft_putstr_fd(vec[i], fd);

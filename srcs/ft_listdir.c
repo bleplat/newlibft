@@ -6,7 +6,7 @@
 /*   By: bleplat <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/04/01 01:43:03 by bleplat           #+#    #+#             */
-/*   Updated: 2019/04/01 04:55:46 by bleplat          ###   ########.fr       */
+/*   Updated: 2019/04/09 19:18:00 by bleplat          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 
 #include "libft.h"
 
-static char *ft_direntryname(struct dirent *entry)
+static char		*ft_direntryname(struct dirent *entry)
 {
 	char		*rst;
 	static char	*dirsep = "/";
@@ -28,7 +28,7 @@ static char *ft_direntryname(struct dirent *entry)
 		return (rst);
 }
 
-static int	ft_listdir_p3(t_array *strarray, DIR *dir_p)
+static int		ft_listdir_p3(t_array *strarray, DIR *dir_p)
 {
 	char			**newitem;
 	struct dirent	*entry;
@@ -55,7 +55,7 @@ static int	ft_listdir_p3(t_array *strarray, DIR *dir_p)
 	return (0);
 }
 
-static int	ft_listdir_p2(char ***out, DIR *dir_p)
+static int		ft_listdir_p2(char ***out, DIR *dir_p)
 {
 	t_array			*strarray;
 
@@ -79,7 +79,7 @@ static int	ft_listdir_p2(char ***out, DIR *dir_p)
 ** Outputed directories ends with '/'.
 */
 
-int			ft_listdir(char ***out, const char *dir)
+int				ft_listdir(char ***out, const char *dir)
 {
 	int				result;
 	DIR				*dir_p;

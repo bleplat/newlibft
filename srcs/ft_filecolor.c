@@ -6,7 +6,7 @@
 /*   By: bleplat <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/04/08 21:59:48 by bleplat           #+#    #+#             */
-/*   Updated: 2019/04/09 18:40:43 by bleplat          ###   ########.fr       */
+/*   Updated: 2019/04/09 19:16:56 by bleplat          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,7 @@ static int			bake(char *dst, char cchar, int isback)
 								"Apr", "May", "Jun",
 								"Jul", "Aug", "Sep",
 								"Oct", "Nov", "Dec"};
+
 	(void)formats;
 	(void)dst;
 	(void)cchar;

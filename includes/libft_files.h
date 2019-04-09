@@ -6,14 +6,13 @@
 /*   By: bleplat <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/04/01 04:17:22 by bleplat           #+#    #+#             */
-/*   Updated: 2019/04/09 18:31:11 by bleplat          ###   ########.fr       */
+/*   Updated: 2019/04/09 19:26:51 by bleplat          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef LIBFT_FILES_H
 # define LIBFT_FILES_H
 
-//# include <dirent.h>
 # include <sys/stat.h>
 
 # include "libft_types.h"
@@ -26,6 +25,7 @@ char			*ft_dirfilepath(char *dir, char *file);
 int				ft_strpopslashes(char *path);
 
 char			*ft_strmode(mode_t mode);
+
 char			*ft_usrname(uid_t uid);
 char			*ft_grpname(gid_t gid);
 
