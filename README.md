@@ -70,6 +70,7 @@ This contains classic libft list functions, and also some other additional helpe
 - ft_sqrt().
 - ft_intsize(): Count of chars requiered to represent an integer.
 - ft_llpow().
+- ft_intsrot(): Rotate an int array.
 
 ## Float / Double functions
 - ft_ldsign(): Long double sign.
@@ -89,7 +90,7 @@ This contains classic libft list functions, and also some other additional helpe
 - "Autofree" functions. Remember the pointers they create, to destroy them in a single call. See sources for details.
 
 ## Variadic
-- ft_va_as\_<type>()read a va_list without jumping to the next one.
+- ft_va_as\_<type>() read a va_list without jumping to the next one.
 - Some of the ft_printf functions may be used to get informations about a format, a an array of variadics. See sources for details.
 
 ## Other
