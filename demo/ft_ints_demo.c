@@ -6,7 +6,7 @@
 /*   By: bleplat <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/03/05 16:46:37 by bleplat           #+#    #+#             */
-/*   Updated: 2019/03/05 22:05:51 by bleplat          ###   ########.fr       */
+/*   Updated: 2019/05/02 18:22:17 by bleplat          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,6 +23,7 @@ int				usage(char *program_name)
 	ft_putstr("\t\t\tn < 0: shuffle the whole list.\n");
 	ft_putstr("\t\t\tn = 0: no shuffle.\n");
 	ft_putstr("\t\t\tn > 0: perform n random shuffle.\n");
+	ft_putstr("\t\t\tn begins with 'r': rotate.\n");
 	ft_putstr("\tsep\tString used as a separator. Default ' '.\n");
 	return (1);
 }
@@ -49,9 +50,11 @@ int				main(int argc, char **argv)
 	shuffle = (argc > 4) ? ft_atoi(argv[4]) : 0;
 	if (shuffle < 0)
 		ft_intsshuffle(ints, count);
+	else if (argc > 4 && argv[4][0] == 'r')
+		ft_intsrot(ints, count, ft_atoi(argv[4] + 1));
 	else
 		ft_intsnshuffle(ints, count, shuffle);
 	ft_putints(ints, count, (argc > 5) ? argv[5] : " ");
-	free(ints);
+	ft_memdel((void**)&ints);
 	return (0);
 }

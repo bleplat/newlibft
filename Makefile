@@ -6,13 +6,16 @@
 #    By: bleplat <marvin@42.fr>                     +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2018/11/07 09:05:04 by bleplat           #+#    #+#              #
-#    Updated: 2019/04/09 18:42:16 by bleplat          ###   ########.fr        #
+#    Updated: 2019/05/02 18:05:43 by bleplat          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME = libft.a
 
 FNT = ft_welcome \
+		ft_intsrot \
+		ft_hrbytes \
+		ft_listxattr \
 		ft_filecolor \
 		ft_lscolors \
 		ft_linkfolow \
@@ -235,7 +238,8 @@ OBJ_DIR = .obj
 DEP_DIR = $(OBJ_DIR)
 LIB_DIR = libs
 
-CFLAGS = -Wall -Werror -Wextra
+DEFINES = -D_DARWIN_USE_64_BIT_INODE
+CFLAGS = -Wall -Werror -Wextra $(DEFINES)
 #CFLAGS += -fsanitize=address
 
 LDFLAGS = 

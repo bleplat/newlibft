@@ -6,26 +6,49 @@
 /*   By: bleplat <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/04/01 09:46:47 by bleplat           #+#    #+#             */
-/*   Updated: 2019/04/09 19:14:19 by bleplat          ###   ########.fr       */
+/*   Updated: 2019/04/10 18:28:43 by bleplat          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <errno.h>
 #include <unistd.h>
+#include <stdlib.h>
 
 #include "libft.h"
 
-// TODO: fix the 2048 with a growing buffer!
+static int		increase_len(char **dst, int *len)
+{
+	if (*dst)
+		free(*dst);
+	if (*len > 1024 * 1024)
+		return (-2);
+	*len = (*len) * 2;
+	*dst = ft_strnew(*len);
+	return ((*dst) ? 0 : -1);
+}
+
+/*
+** Folow a symbolic link, returning its content.
+** On error, return NULL and set errno.
+*/
+
 char			*ft_linkfolow(const char *link)
 {
-	ssize_t		size;
-	char		buf[2048 + 1];
-	char		*cpy;
+	char		*dst;
+	int			dst_len;
+	int			readed;
 
-	if ((size = readlink(link, buf, 2048)) < 0)
-		return (NULL);
-	cpy = ft_strsub(buf, 0, size);
-	if (!cpy)
-		errno = ENOMEM;
-	return (cpy);
+	errno = 0;
+	dst = NULL;
+	dst_len = 32 / 2;
+	while (increase_len(&dst, &dst_len) == 0)
+	{
+		readed = readlink(link, dst, dst_len);
+		if (readed < 0)
+			return (NULL + ft_free0(dst));
+		if (readed < dst_len)
+			return (dst);
+	}
+	errno = ENOMEM;
+	return (NULL);
 }

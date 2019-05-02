@@ -6,7 +6,7 @@
 /*   By: bleplat <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/07 10:59:30 by bleplat           #+#    #+#             */
-/*   Updated: 2019/04/09 18:46:48 by bleplat          ###   ########.fr       */
+/*   Updated: 2019/05/02 18:05:07 by bleplat          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -134,13 +134,19 @@ int				ft_intsize(int i);
 t_llint			ft_llpow(t_llint nb, unsigned int p);
 long double		ft_ldsign(long double d);
 int				ft_ldsize(long double d);
+void			ft_swapint(int *a, int *b);
+double			ft_dclamp(double x, double min, double max);
+double			ft_dmix(double x, double y, double a);
+
+/*
+** I n t s
+*/
+
 int				*ft_intsrange(int min, int count, int step);
 void			ft_intsshuffle(int *array, int count);
 void			ft_intsnshuffle(int *array, int count, int shuffles_count);
 void			ft_putints(const int *array, int count, const char *sep);
-void			ft_swapint(int *a, int *b);
-double			ft_dclamp(double x, double min, double max);
-double			ft_dmix(double x, double y, double a);
+void			ft_intsrot(int *array, int count, int rotation);
 
 /*
 ** C o n v e r t i o n
@@ -151,6 +157,7 @@ char			*ft_lltoa(long long int n);
 char			*ft_ulltoa_basestr(unsigned long long int n, char *base_str);
 char			*ft_ldtoa(long double d, unsigned int precision);
 int				ft_ldspecial(long double d, char **may_out);
+void			ft_hrbytes(char *buf5b, long long int bytes);
 
 /*
 ** S t r i n g s

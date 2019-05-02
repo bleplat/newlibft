@@ -6,7 +6,7 @@
 /*   By: bleplat <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/04/01 04:17:22 by bleplat           #+#    #+#             */
-/*   Updated: 2019/04/09 19:26:51 by bleplat          ###   ########.fr       */
+/*   Updated: 2019/04/10 19:22:40 by bleplat          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,6 +32,8 @@ char			*ft_grpname(gid_t gid);
 /*
 ** F i l e s
 */
+
+int				ft_listxattr(char **out, const char *path, int options);
 
 mode_t			ft_filemode(const char *filename);
 uid_t			ft_fileusr(const char *filename);

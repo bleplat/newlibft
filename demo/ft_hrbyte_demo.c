@@ -1,30 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_linkfolow_demo.c                                :+:      :+:    :+:   */
+/*   ft_hrbyte_demo.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: bleplat <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/04/08 19:37:20 by bleplat           #+#    #+#             */
-/*   Updated: 2019/04/10 18:27:39 by bleplat          ###   ########.fr       */
+/*   Created: 2019/04/10 20:06:44 by bleplat           #+#    #+#             */
+/*   Updated: 2019/04/10 20:23:20 by bleplat          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdlib.h>
-
 #include "libft.h"
 
-int				main(int argc, char **argv)
+int			main(int argc, char **argv)
 {
-	char		*result;
+	int			bytes;
+	int			step;
+	char		hr[5];
 
-	if (argc != 2)
+	bytes = (argc > 1) ? ft_atoi(argv[1]) : 0;
+	step = (argc > 2) ? ft_atoi(argv[2]) : 1;
+	while (1)
 	{
-		ft_printf("Usage: %s LINK\n", argv[0]);
-		return (127);
+		ft_hrbytes(hr, bytes);
+		ft_printf("{red}%12d        {green}%s{black}", bytes, hr);
+		ft_pause();
+		bytes += step;
 	}
-	result = ft_linkfolow(argv[1]);
-	ft_printf("%s -> %s\n", argv[1], result);
-	free(result);
 	return (0);
 }
