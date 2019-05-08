@@ -6,7 +6,7 @@
 /*   By: bleplat <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/07 21:09:05 by bleplat           #+#    #+#             */
-/*   Updated: 2019/05/08 11:47:37 by bleplat          ###   ########.fr       */
+/*   Updated: 2019/05/08 12:05:34 by bleplat          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -50,7 +50,7 @@
 ** FTMO_COUNT_INFINITE: count will be set to high and not decrease.
 ** <positive_integer>: countset to 'new_count', and decrease by one every call
 ** FTMO_COUNT_RETRIEVE: trigger the next count and return the current one.
-** FTMO_COUNT_GET: get what should be the next count without triggering anything.
+** FTMO_COUNT_GET: get what should be the next count without triggering.
 */
 
 int			ftmo_count(int new_count)
@@ -69,12 +69,15 @@ int			ftmo_count(int new_count)
 int			ftmo_init(void)
 {
 	char	*rst;
+	int		count;
 	int		mode;
 
+	count = 0;
 	rst = getenv("FTMO_COUNT");
 	if (rst)
-		ftmo_count(atoi(rst));
-	mode = (FTMO_MODE_MALLOC | FTMO_MODE_RESET);
+		count = atoi(rst);
+	ftmo_count((count >= 0) ? count : FTMO_COUNT_INFINITE);
+	mode = FTMO_MODE_MALLOC | FTMO_MODE_RESET;
 	rst = getenv("FTMO_MODE");
 	if (rst)
 		mode = atoi(rst);

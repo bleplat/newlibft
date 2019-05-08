@@ -6,7 +6,7 @@
 /*   By: bleplat <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/04/01 04:17:22 by bleplat           #+#    #+#             */
-/*   Updated: 2019/04/10 19:22:40 by bleplat          ###   ########.fr       */
+/*   Updated: 2019/05/08 12:06:30 by bleplat          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -50,8 +50,8 @@ int				ft_listdir(char ***out, const char *dir);
 ** C o l o r i n g
 */
 
-t_lscolors			ft_lscolors(void);
-void				ft_filecforefont(char *dst, t_lscolors colors, t_stat stat);
-void				ft_filecbackfont(char *dst, t_lscolors colors, t_stat stat);
+t_lscolors		ft_lscolors(void);
+void			ft_filecforefont(char *dst, t_lscolors colors, t_stat stat);
+void			ft_filecbackfont(char *dst, t_lscolors colors, t_stat stat);
 
 #endif

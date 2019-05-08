@@ -6,7 +6,7 @@
 #    By: bleplat <marvin@42.fr>                     +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2018/11/07 09:05:04 by bleplat           #+#    #+#              #
-#    Updated: 2019/05/08 11:07:08 by bleplat          ###   ########.fr        #
+#    Updated: 2019/05/08 11:53:36 by bleplat          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -16,9 +16,9 @@
 
 NAME_1  =   libft.a
 NAME_2  =   libftmo.a
-NAME_3  =   demos
-NAME    =   $(NAME_1)$(NAME_2)
-ALL_NAMES = $(NAME_1) $(NAME_2) $(NAME_3)
+NAME    =   $(NAME_1)_$(NAME_2)
+ALL_NAMES = $(NAME_1) $(NAME_2)
+
 
 ###########################
 ###  L I B R A R I E S  ###
@@ -27,6 +27,7 @@ ALL_NAMES = $(NAME_1) $(NAME_2) $(NAME_3)
 # LIBFT_DIR = ./libft
 # LIBFT     = $(LIBFT_DIR)/libft.a
 # LIBFTMO   = $(LIBFT_DIR)/libftmo.a
+
 
 ###########################
 ###    S O U R C E S    ###
@@ -275,7 +276,6 @@ OBJ = $(patsubst %, $(OBJ_DIR)/%.o, $(FNT))
 OBJ_C = $(patsubst %, $(OBJ_DIR)/%.o, $(FNT_C))
 OBJ_1 = $(patsubst %, $(OBJ_DIR)/%.o, $(FNT_1))
 OBJ_2 = $(patsubst %, $(OBJ_DIR)/%.o, $(FNT_2))
-OBJ_3 = $(patsubst %, $(OBJ_DIR)/%.o, $(FNT_3))
 
 
 ###########################
@@ -318,12 +318,6 @@ $(NAME_2): $(OBJ_C) $(OBJ_2)
 	@printf "\e[92m" || true
 	ar rc $(NAME_2) $(OBJ_2)
 	ranlib $(NAME_2)
-	@printf "\e[0m" || true
-
-$(NAME_3): $(OBJ_C) $(OBJ_3)
-	@printf "\e[92m" || true
-	ar rc $(NAME_3) $(OBJ_3)
-	ranlib $(NAME_3)
 	@printf "\e[0m" || true
 
 $(OBJ_DIR):
