@@ -6,7 +6,7 @@
 /*   By: bleplat <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/07 21:09:05 by bleplat           #+#    #+#             */
-/*   Updated: 2019/05/08 11:11:09 by bleplat          ###   ########.fr       */
+/*   Updated: 2019/05/08 11:47:37 by bleplat          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -86,7 +86,7 @@ static void	ftmo_ftmo(int *rst, int cnt, int mode)
 	char	*ftmo;
 	int		len;
 
-	if (cnt < 0)
+	if (cnt <= 0)
 	{
 		ftmo = getenv("FTMO");
 		if (ftmo != NULL)
