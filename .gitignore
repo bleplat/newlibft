@@ -5,6 +5,7 @@
 /.trash/
 /*/demo/
 TODO
+*.log
 
 # Prerequisites
 *.d
