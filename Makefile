@@ -6,7 +6,7 @@
 #    By: bleplat <marvin@42.fr>                     +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2018/11/07 09:05:04 by bleplat           #+#    #+#              #
-#    Updated: 2019/05/08 11:53:36 by bleplat          ###   ########.fr        #
+#    Updated: 2019/05/09 23:17:41 by bleplat          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -255,7 +255,12 @@ FNT_1 =		ft_welcome.c \
 			ft_printf_rstparts_clean.c \
 			ft_goodbye.c \
 
-FNT_2 =		ft_malloc_override.c \
+FNT_2 =		ftmo_malloc.c \
+			ftmo_choice.c \
+			ftmo_mode.c \
+			ftmo_count.c \
+			ftmo_getenv.c \
+			ftmo_log.c \
 
 FNT = $(FNT_1) $(FNT_2)
 
@@ -303,7 +308,11 @@ all: $(NAME)
 
 .PHONY: optimized
 optimized: CFLAGS += -o3
-optimized: $(NAME_1) $(NAME_2)
+optimized: all
+
+.PHONY: with_libftmo
+with_libftmo: LDFLAGS += -L. -lftmo
+with_libftmo: all
 
 .PHONY: $(NAME)
 $(NAME): $(NAME_1) $(NAME_2)
@@ -319,6 +328,7 @@ $(NAME_2): $(OBJ_C) $(OBJ_2)
 	ar rc $(NAME_2) $(OBJ_2)
 	ranlib $(NAME_2)
 	@printf "\e[0m" || true
+	make ftmo_help
 
 $(OBJ_DIR):
 	@printf "\e[94m" || true
@@ -328,6 +338,16 @@ $(OBJ_DIR):
 $(OBJ_DIR)/%.o: $(SRC_DIR)/% | $(OBJ_DIR)
 	@printf "\e[96m" || true
 	$(CC) $(CFLAGS) -o $@ -I $(INCLUDES) -c $<
+	@printf "\e[0m" || true
+
+.PHONY: ftmo_help
+ftmo_help:
+	@printf "\e[97m" || true
+	@printf "Write the commands below in your shell to get libftmo ready:\n" || true
+	export FTMO_COUNT=2147483647 # infinite
+	export FTMO_MODE=8           # 1: fail by default, 2: true malloc by default, 4: switch, 8: enable FTMO_EACH
+	export FTMO_EACH=1           # fail a single time after FTMO_COUNT calls
+	export FTMO_LOGD=ftmo.log    # malloc/free log file or 0/1/2 outputs or -1
 	@printf "\e[0m" || true
 
 .PHONY: clean
