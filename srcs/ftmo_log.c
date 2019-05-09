@@ -6,7 +6,7 @@
 /*   By: bleplat <bleplat@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/09 19:40:13 by bleplat           #+#    #+#             */
-/*   Updated: 2019/05/09 23:07:56 by bleplat          ###   ########.fr       */
+/*   Updated: 2019/05/09 23:25:17 by bleplat          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -55,11 +55,11 @@ void		ftmo_log(int func, int size, void *addr)
 			write(file_d, "\t\t\t\t\t\t\t\t", 8);
 		if (func == FTMO_FUNC_MALLOC)
 		{
-			write(file_d, "malloc   size: ", 16);
+			write(file_d, "[malloc] size: ", 16);
 			ftmo_putnbr_fd(size, file_d);
 		}
 		if (func == FTMO_FUNC_FREE)
-			write(file_d, "freed           ", 17);
+			write(file_d, "[free]          ", 17);
 		write(file_d, "\taddress: 0x", 12);
 		ftmo_putptr_fd((unsigned long long)addr, file_d);
 		write(file_d, "\n\e[0m", 5);
