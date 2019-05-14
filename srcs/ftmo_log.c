@@ -6,7 +6,7 @@
 /*   By: bleplat <bleplat@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/09 19:40:13 by bleplat           #+#    #+#             */
-/*   Updated: 2019/05/09 23:25:17 by bleplat          ###   ########.fr       */
+/*   Updated: 2019/05/14 17:04:39 by bleplat          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 #include "libftmo.h"
 
-void		ftmo_putnbr_fd(long long n, int fd)
+void			ftmo_putnbr_fd(long long n, int fd)
 {
 	if (n < 0)
 	{
@@ -26,11 +26,18 @@ void		ftmo_putnbr_fd(long long n, int fd)
 	write(fd, &("0123456789"[n % 10]), 1);
 }
 
-void		ftmo_putptr_fd(unsigned long long n, int fd)
+void			ftmo_putptr_fd(unsigned long long n, int fd)
 {
 	if (n >= 16)
 		ftmo_putptr_fd(n / 16, fd);
 	write(fd, &("0123456789abcdef"[n % 16]), 1);
+}
+
+static int		ftmo_log_setup(int file_d)
+{
+	write(file_d, "\t\t\t\t\t\t\t\t", 8);
+	write(file_d, "\e[33mFTMO READY AND LOGGING\e[0m\n", 32);
+	return (file_d);
 }
 
 /*
@@ -39,12 +46,12 @@ void		ftmo_putptr_fd(unsigned long long n, int fd)
 ** size if not -1 represent a file descriptor.
 */
 
-void		ftmo_log(int func, int size, void *addr)
+void			ftmo_log(int func, int size, void *addr)
 {
 	static int		file_d = -98;
 
 	if (func == FTMO_FUNC_SETUP)
-		file_d = size;
+		file_d = ftmo_log_setup(size);
 	else if (file_d < 0)
 		return ;
 	else

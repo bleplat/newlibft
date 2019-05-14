@@ -6,7 +6,7 @@
 #    By: bleplat <marvin@42.fr>                     +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2018/11/07 09:05:04 by bleplat           #+#    #+#              #
-#    Updated: 2019/05/09 23:17:41 by bleplat          ###   ########.fr        #
+#    Updated: 2019/05/14 17:02:01 by bleplat          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -15,7 +15,7 @@
 ###########################
 
 NAME_1  =   libft.a
-NAME_2  =   libftmo.a
+NAME_2  =   libftmo.so
 NAME    =   $(NAME_1)_$(NAME_2)
 ALL_NAMES = $(NAME_1) $(NAME_2)
 
@@ -310,10 +310,6 @@ all: $(NAME)
 optimized: CFLAGS += -o3
 optimized: all
 
-.PHONY: with_libftmo
-with_libftmo: LDFLAGS += -L. -lftmo
-with_libftmo: all
-
 .PHONY: $(NAME)
 $(NAME): $(NAME_1) $(NAME_2)
 
@@ -325,8 +321,8 @@ $(NAME_1): $(OBJ_C) $(OBJ_1)
 
 $(NAME_2): $(OBJ_C) $(OBJ_2)
 	@printf "\e[92m" || true
-	ar rc $(NAME_2) $(OBJ_2)
-	ranlib $(NAME_2)
+	$(CC) $(CFLAGS) -shared -o $@ $^
+	chmod -x $@ || true
 	@printf "\e[0m" || true
 	make ftmo_help
 
@@ -342,12 +338,15 @@ $(OBJ_DIR)/%.o: $(SRC_DIR)/% | $(OBJ_DIR)
 
 .PHONY: ftmo_help
 ftmo_help:
+	@printf "\e[0mWrite the commands below in your shell to get libftmo ready:\n" || true
 	@printf "\e[97m" || true
-	@printf "Write the commands below in your shell to get libftmo ready:\n" || true
-	export FTMO_COUNT=2147483647 # infinite
-	export FTMO_MODE=8           # 1: fail by default, 2: true malloc by default, 4: switch, 8: enable FTMO_EACH
-	export FTMO_EACH=1           # fail a single time after FTMO_COUNT calls
-	export FTMO_LOGD=ftmo.log    # malloc/free log file or 0/1/2 outputs or -1
+	export FTMO_COUNT=2147483647
+	export FTMO_MODE=8
+	export FTMO_EACH=1
+	export FTMO_LOGD=ftmo.log
+	@printf "\e[0mOn Linux: \e[97m LD_PRELOAD=libftmo.so ; ./a.out\n" || true
+	@printf "\e[0mOn Mac:   \e[97m DYLD_FORCE_FLAT_NAMESPACE=1 ; DYLD_INSERT_LIBRARIES=libftmo.so ; ./a.out\n" || true
+	@printf "\e[0mNote it's broken at 42, but you can link your program with \e[97m-lftmo\n"
 	@printf "\e[0m" || true
 
 .PHONY: clean

@@ -6,7 +6,7 @@
 /*   By: bleplat <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/09 22:20:59 by bleplat           #+#    #+#             */
-/*   Updated: 2019/05/09 23:06:04 by bleplat          ###   ########.fr       */
+/*   Updated: 2019/05/14 15:55:44 by bleplat          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,6 +40,7 @@ void			alloc(int argc, char **argv, int i)
 	if ((i + 1 < argc) && argv[i + 1][0] == '+' && argv[i + 1][1] == '\0')
 		plus = 1;
 	mem = malloc(ft_atoi(size_str));
+	ft_putstr("Allocated some memory...\n");
 	if (plus == 1)
 		alloc(argc, argv, i + 2);
 	if (rem == 0)
