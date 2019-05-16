@@ -4,7 +4,7 @@ Take a look at the demo folder to see what it can achieve.
 
 # NewLibftMo
 Tiny library to choose when malloc succeed or fail.
-See ft_malloc_override.c for details.
+See ftmo_*.c for details.
 
 # Demo files
 Folder 'demo' contains sources, not part of the library, but demonstrating the use of some functions.
