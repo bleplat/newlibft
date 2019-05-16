@@ -1,19 +1,19 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_printf_demo_n.c                                 :+:      :+:    :+:   */
+/*   ft_printf_demo_r.c                                 :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: bleplat <marvin@42.fr>                     +#+  +:+       +#+        */
+/*   By: bleplat <bleplat@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/02/27 22:16:42 by bleplat           #+#    #+#             */
-/*   Updated: 2019/02/27 22:28:36 by bleplat          ###   ########.fr       */
+/*   Created: 2019/05/16 20:06:16 by bleplat           #+#    #+#             */
+/*   Updated: 2019/05/16 20:06:21 by bleplat          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 #include "ft_printf.h"
 
-int				main(int argc, char **argv)
+int				main(void)
 {
 	static char		*data = "Some \x01\x02hAArdd \x9f coded\x82 non-asc\xd1ii";
 
