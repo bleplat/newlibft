@@ -6,7 +6,7 @@
 #    By: bleplat <marvin@42.fr>                     +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2018/11/07 09:05:04 by bleplat           #+#    #+#              #
-#    Updated: 2019/05/16 20:00:07 by usr/bin/w        ###   ########.fr        #
+#    Updated: 2019/05/16 20:11:08 by bleplat          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -288,11 +288,11 @@ FNT_DEMO =	ft_allocs_demo \
 ###########################
 
 INCLUDES = includes
-SRC_DIR = srcs
-OBJ_DIR = .obj
-DEP_DIR = $(OBJ_DIR)
-LIB_DIR = libs
-DEMO_DIR=demo
+SRC_DIR  = srcs
+OBJ_DIR  = .obj
+DEP_DIR  = $(OBJ_DIR)
+LIB_DIR  = libs
+DEMO_DIR = demo
 
 SRC = $(patsubst %, $(SRC_DIR)/%, $(FNT))
 DEP = $(patsubst %, $(DEP_DIR)/%.d, $(FNT))
