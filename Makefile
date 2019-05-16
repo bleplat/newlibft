@@ -6,7 +6,7 @@
 #    By: bleplat <marvin@42.fr>                     +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2018/11/07 09:05:04 by bleplat           #+#    #+#              #
-#    Updated: 2019/05/16 20:11:08 by bleplat          ###   ########.fr        #
+#    Updated: 2019/05/16 22:00:37 by bleplat          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -402,7 +402,7 @@ display_debug:
 .PHONY: demos
 demos: $(DEMO)
 
-$(DEMO_DIR)/%.demo: $(OBJ_DIR)/$(DEMO_DIR)/%.o
+$(DEMO_DIR)/%.demo: $(OBJ_DIR)/$(DEMO_DIR)/%.o libft.a
 	@printf "\e[92m" || true
 	gcc $(CFLAGS) -o $@ $< $(LDFLAGS)
 	@printf "\e[0m" || true
