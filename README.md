@@ -100,7 +100,7 @@ This contains classic libft list functions, and also some other additional helpe
 ## Other
 - ft_welcome(), ft_goodbye(): Very useless functions.
 - ft_pushpop(): 4 parameters per function is not enough? Then push them and pop them!
-- ft_swap<type>: Swap types from pointers. Only int now cause im lazy.
+- ft_swap<type>: Swap types from pointers.
 - Lot of things.
 
 ## Files
