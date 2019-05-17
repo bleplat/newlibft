@@ -6,7 +6,7 @@
 #    By: bleplat <marvin@42.fr>                     +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2018/11/07 09:05:04 by bleplat           #+#    #+#              #
-#    Updated: 2019/05/16 22:00:37 by bleplat          ###   ########.fr        #
+#    Updated: 2019/05/17 20:23:52 by bleplat          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -73,6 +73,7 @@ FNT_1 =		ft_welcome.c \
 			ft_llrandom.c \
 			ft_ullrandom.c \
 			ft_swapint.c \
+			ft_swapptr.c \
 			ft_atoi.c \
 			ft_atoi32check.c \
 			ft_bzero.c \

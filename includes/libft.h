@@ -6,7 +6,7 @@
 /*   By: bleplat <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/07 10:59:30 by bleplat           #+#    #+#             */
-/*   Updated: 2019/05/07 20:43:10 by bleplat          ###   ########.fr       */
+/*   Updated: 2019/05/17 20:24:31 by bleplat          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -135,6 +135,7 @@ t_llint			ft_llpow(t_llint nb, unsigned int p);
 long double		ft_ldsign(long double d);
 int				ft_ldsize(long double d);
 void			ft_swapint(int *a, int *b);
+void			ft_swapptr(void **a, void **b);
 double			ft_dclamp(double x, double min, double max);
 double			ft_dmix(double x, double y, double a);
 
