@@ -105,3 +105,8 @@ This contains classic libft list functions, and also some other additional helpe
 
 ## Files
 - ft_listdir(): list entries in a directory.
+
+# Norm/Practices
+- Before any other, the 42 norm is used.
+- Includes are grouped per projects, from lowest to highest level, then sorted alphabetically.
+- Newest functions will alway be commented.
