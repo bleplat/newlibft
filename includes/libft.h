@@ -6,7 +6,7 @@
 /*   By: bleplat <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/07 10:59:30 by bleplat           #+#    #+#             */
-/*   Updated: 2019/05/17 20:24:31 by bleplat          ###   ########.fr       */
+/*   Updated: 2020/01/15 14:43:23 by bleplat          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -242,6 +242,7 @@ int				ft_autofree_abort0(void);
 int				ft_memdel0(void **to_free);
 int				ft_memdel1(void **to_free);
 int				ft_free0(void *to_free);
+void			*ft_freen(void *to_free);
 int				ft_ptrcount(void **ptr);
 int				ft_memrealloc(void **mem, size_t *prev_size, size_t new_size);
 void			*ft_memdup(const void *s1, size_t size);

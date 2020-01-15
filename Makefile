@@ -6,7 +6,7 @@
 #    By: bleplat <marvin@42.fr>                     +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2018/11/07 09:05:04 by bleplat           #+#    #+#              #
-#    Updated: 2019/05/17 20:23:52 by bleplat          ###   ########.fr        #
+#    Updated: 2020/01/15 14:45:59 by bleplat          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -175,6 +175,7 @@ FNT_1 =		ft_welcome.c \
 			ft_memdel0.c \
 			ft_memdel1.c \
 			ft_free0.c \
+			ft_freen.c \
 			ft_ptrcount.c \
 			ft_isupper.c \
 			ft_array_new.c \
