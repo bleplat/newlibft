@@ -6,7 +6,7 @@
 /*   By: bleplat <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/09 22:20:59 by bleplat           #+#    #+#             */
-/*   Updated: 2019/05/14 15:55:44 by bleplat          ###   ########.fr       */
+/*   Updated: 2020/02/14 03:58:40 by bleplat          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,8 +16,10 @@
 
 /*
 ** This is used to test the LibftMo library, present in this libft.
-** Because LibftMo is used to find memory leaks, this program may
-** leak on purpose.
+** Because LibftMo is used to find memory leaks, this program will
+** leak ON PURPOSE.
+**
+** see 'make ftmo_help'.
 */
 
 void			alloc(int argc, char **argv, int i)

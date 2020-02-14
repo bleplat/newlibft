@@ -6,7 +6,7 @@
 #    By: bleplat <marvin@42.fr>                     +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2018/11/07 09:05:04 by bleplat           #+#    #+#              #
-#    Updated: 2020/01/15 14:45:59 by bleplat          ###   ########.fr        #
+#    Updated: 2020/02/14 03:59:35 by bleplat          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -115,6 +115,7 @@ FNT_1 =		ft_welcome.c \
 			ft_putendl_fd.c \
 			ft_putnbr.c \
 			ft_putnbr_fd.c \
+			ft_putxnbr_fd.c \
 			ft_putstr.c \
 			ft_putstr_fd.c \
 			ft_sqrt.c \
@@ -258,11 +259,21 @@ FNT_1 =		ft_welcome.c \
 			ft_goodbye.c \
 
 FNT_2 =		ftmo_malloc.c \
-			ftmo_choice.c \
-			ftmo_mode.c \
-			ftmo_count.c \
+			ftmo_free.c \
+			ftmo_firstcall.c \
+			ftmo_lastcall.c \
 			ftmo_getenv.c \
-			ftmo_log.c \
+			ftmo_print.c \
+			ftmo_should_malloc_succeed.c \
+			ftmo_track.c \
+			ft_isdigit.c \
+			ft_atoi.c \
+			ft_putchar_fd.c \
+			ft_putxnbr_fd.c \
+			ft_putstr_fd.c \
+			ft_putnbr_fd.c \
+			ft_strlen.c \
+
 
 FNT = $(FNT_1) $(FNT_2)
 
@@ -423,11 +434,11 @@ $(OBJ_DIR)/$(DEMO_DIR)%.o: $(DEMO_DIR)/%.c | $(OBJ_DIR)/$(DEMO_DIR)
 ftmo_help:
 	@printf "\e[0mWrite the commands below in your shell to get libftmo ready:\n" || true
 	@printf "\e[97m" || true
-	export FTMO_COUNT=2147483647
-	export FTMO_MODE=8
+	export FTMO_IGNORES=-1
+	export FTMO_MODE=0
 	export FTMO_EACH=1
 	export FTMO_LOGD=ftmo.log
 	@printf "\e[0mOn Linux: \e[97m LD_PRELOAD=libftmo.so ; ./a.out\n" || true
 	@printf "\e[0mOn Mac:   \e[97m DYLD_FORCE_FLAT_NAMESPACE=1 ; DYLD_INSERT_LIBRARIES=libftmo.so ; ./a.out\n" || true
-	@printf "\e[0mNote it's broken at 42, but you can link your program with \e[97m-lftmo\n"
+	@printf "\e[0mYou should also be alble to link your program with \e[97m-lftmo\n"
 	@printf "\e[0m" || true

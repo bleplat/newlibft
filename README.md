@@ -3,8 +3,11 @@ Just another libft.
 Take a look at the demo folder to see what it can achieve.
 
 # NewLibftMo
-Tiny library to choose when malloc succeed or fail.
-See ftmo_*.c for details.
+*NEW*
+
+LibftMO to detect momory leaks.
+Either link with -libftmo or at runtime to be warned of memory leaks when your program exits.
+LibftMo can also force the malloc you wish to fail, to test incredible scenarios.
 
 # Demo files
 Folder 'demo' contains sources, not part of the library, but demonstrating the use of some functions.
