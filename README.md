@@ -8,9 +8,9 @@ Take a look at the demo folder to see what it can achieve.
 LibftMO to detect memory leaks.
 - Either link with -libftmo or at runtime, and get flashy warnings and errors when your programs leaks or double-free
 - You can see the order index of the allocation, its address and its size.
-- You can see the call stack from when the maalloc was done.
+- You can see the call stack from when the malloc was done.
 - You can also force the mallocs you want to fail, using environnement variables.
-- Test incredible scenarios durring evaluations MOUHAHAHAHAHA.
+- Test incredible scenarios durring defenses MOUHAHAHAHAHA.
 do 'make ftmo\_help' for details
 
 # Demo files
