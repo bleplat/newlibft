@@ -6,7 +6,7 @@
 /*   By: bleplat <bleplat@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/07 21:36:00 by bleplat           #+#    #+#             */
-/*   Updated: 2020/02/14 03:52:25 by bleplat          ###   ########.fr       */
+/*   Updated: 2020/02/15 00:17:07 by bleplat          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,6 +37,8 @@
 ** 0: failure, 1: success, 2: default, 3: post-default
 ** - FTMO_LOGD: fd or file to log to. Not working in this version yet.
 */
+
+# define FTMO_BACKTRACE_COUNT 128
 
 /*
 ** Modes:

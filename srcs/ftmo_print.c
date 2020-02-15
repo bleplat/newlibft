@@ -6,7 +6,7 @@
 /*   By: bleplat <bleplat@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/02/13 23:43:22 by bleplat           #+#    #+#             */
-/*   Updated: 2020/02/14 03:53:47 by bleplat          ###   ########.fr       */
+/*   Updated: 2020/02/15 00:48:19 by bleplat          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,6 +38,8 @@ int			ftmo_log(int v, const char *msg)
 
 int			ftmo_putreg(int fd, t_ftmo_region *r)
 {
+	int i_calltree;
+
 	ft_putstr_fd("[", fd);
 	ft_putnbr_fd(r->index, fd);
 	ft_putstr_fd(" -- addr: 0x", fd);
@@ -45,6 +47,13 @@ int			ftmo_putreg(int fd, t_ftmo_region *r)
 	ft_putstr_fd(" size: ", fd);
 	ft_putnbr_fd(r->size, fd);
 	ft_putstr_fd("]", fd);
+	i_calltree = 0;
+	while (r->calltree && r->calltree[i_calltree])
+	{
+		ft_putstr_fd("\n\t\t -> ", fd);
+		ft_putstr_fd(r->calltree[i_calltree], fd);
+		i_calltree++;
+	}
 	return (0);
 }
 
@@ -52,9 +61,7 @@ int			ftmo_log_p(int v, const char *p, void *pt, const char *s)
 {
 	t_ftmo_region r;
 
-	r.index = -1;
-	r.size = 0;
-	r.ptr = pt;
+	r = ftmo_make_reg(-1, pt, 0);
 	return (ftmo_log_r(v, p, &r, s));
 }
 

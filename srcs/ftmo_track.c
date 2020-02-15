@@ -6,7 +6,7 @@
 /*   By: bleplat <bleplat@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/02/13 22:36:12 by bleplat           #+#    #+#             */
-/*   Updated: 2020/02/14 03:54:32 by bleplat          ###   ########.fr       */
+/*   Updated: 2020/02/15 00:21:07 by bleplat          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -66,11 +66,11 @@ static void		verify(t_ftmo_region *regions, int count)
 
 	if (count != 0)
 	{
-		ftmo_log(-1, "Memory leaks:");
 		i = 0;
 		while (i < count)
 		{
-			ftmo_log_r(-1, "\t", &regions[i], "");
+			ftmo_log_r(-1, "LEAK ", &regions[i], "");
+			ftmo_libc_free(regions[i].calltree);
 			i++;
 		}
 		ftmo_log(1, "Note LIBFTMO catching leaks may blind other tools!");
@@ -85,6 +85,8 @@ static void		verify(t_ftmo_region *regions, int count)
 ** - FTMO_TRACK_ACTION_FREE
 ** - FTMO_TRACK_ACTION_VERIFY
 ** - FTMO_TRACK_ACTION_CLEANUP
+**
+** TODO: incorrect cleanup/verify done in a hurry. To be fixed.
 */
 
 int				ftmo_track(int track_action, void *ptr, size_t sz, int mindex)
@@ -99,9 +101,7 @@ int				ftmo_track(int track_action, void *ptr, size_t sz, int mindex)
 			if (expend_regions(&regions, &region_capacity) < 0)
 				return (ftmo_log(-1, "Internal allocation failed!"));
 		region_count++;
-		regions[region_count - 1].index = mindex;
-		regions[region_count - 1].size = sz;
-		regions[region_count - 1].ptr = ptr;
+		regions[region_count - 1] = ftmo_make_reg(mindex, ptr, sz);
 	}
 	if (track_action == FTMO_TRACK_FREE && ptr != NULL)
 		return (dofree(regions, &region_count, ptr));
