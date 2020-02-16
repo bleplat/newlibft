@@ -6,7 +6,7 @@
 #    By: bleplat <marvin@42.fr>                     +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2018/11/07 09:05:04 by bleplat           #+#    #+#              #
-#    Updated: 2020/02/15 00:38:44 by bleplat          ###   ########.fr        #
+#    Updated: 2020/02/16 14:12:21 by bleplat          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -187,6 +187,7 @@ FNT_1 =		ft_welcome.c \
 			ft_array_at.c \
 			ft_array_clear.c \
 			ft_array_reset.c \
+			ft_array_removeat.c \
 			ft_pow.c \
 			ft_llpow.c \
 			ft_strcatchar.c \
