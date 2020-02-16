@@ -6,7 +6,7 @@
 /*   By: bleplat <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/12/07 17:53:32 by bleplat           #+#    #+#             */
-/*   Updated: 2019/03/04 14:47:44 by bleplat          ###   ########.fr       */
+/*   Updated: 2020/02/16 13:27:35 by bleplat          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,6 +30,7 @@ struct						s_array
 
 t_array						*ft_array_new(int item_size, int item_capacity);
 void						ft_array_del(t_array **a);
+int							ft_array_del0(t_array **a);
 int							ft_array_reserve(t_array *a, int item_capacity);
 void						*ft_array_newitem(t_array *a);
 int							ft_array_shrink(t_array *a);

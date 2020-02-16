@@ -6,7 +6,7 @@
 /*   By: bleplat <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/07 10:59:30 by bleplat           #+#    #+#             */
-/*   Updated: 2020/02/14 03:26:43 by bleplat          ###   ########.fr       */
+/*   Updated: 2020/02/16 13:22:14 by bleplat          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,6 +34,9 @@
 
 # define FT_ANSICOLOR_FLAG_BACKGROUND 0x1
 # define FT_ANSICOLOR_FLAG_RGB 0x2
+
+# define FT_READTONL_MALLOC_FAILED -3
+# define FT_READTONL_LINE_TOO_LONG -2
 
 /*
 ** L i b f t   P a r t   I
