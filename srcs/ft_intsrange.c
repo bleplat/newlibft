@@ -6,7 +6,7 @@
 /*   By: bleplat <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/03/05 16:25:02 by bleplat           #+#    #+#             */
-/*   Updated: 2020/02/17 20:44:37 by bleplat          ###   ########.fr       */
+/*   Updated: 2020/02/17 22:04:20 by bleplat          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -59,7 +59,7 @@ int				*ft_intsrangeop(int min, int count, int step, char op)
 		else if (op == '/')
 			min = min / step;
 		else if (op == '%')
-			min = min % step;
+			min = min % count + step;
 		else if (op == '-')
 			min = min - step;
 		else
