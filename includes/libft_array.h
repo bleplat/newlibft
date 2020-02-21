@@ -6,7 +6,7 @@
 /*   By: bleplat <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/12/07 17:53:32 by bleplat           #+#    #+#             */
-/*   Updated: 2020/02/16 14:12:56 by bleplat          ###   ########.fr       */
+/*   Updated: 2020/02/21 15:08:40 by bleplat          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,5 +38,6 @@ void						*ft_array_at(t_array *a, int index);
 void						ft_array_clear(t_array *a);
 int							ft_array_reset(t_array *a, int item_count);
 void						ft_array_removeat(t_array *a, int index);
+void						*ft_array_pop(t_array *a);
 
 #endif

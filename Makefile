@@ -6,7 +6,7 @@
 #    By: bleplat <marvin@42.fr>                     +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2018/11/07 09:05:04 by bleplat           #+#    #+#              #
-#    Updated: 2020/02/16 16:19:12 by bleplat          ###   ########.fr        #
+#    Updated: 2020/02/21 15:08:56 by bleplat          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -188,6 +188,7 @@ FNT_1 =		ft_welcome.c \
 			ft_array_clear.c \
 			ft_array_reset.c \
 			ft_array_removeat.c \
+			ft_array_pop.c \
 			ft_pow.c \
 			ft_llpow.c \
 			ft_strcatchar.c \
@@ -336,7 +337,7 @@ CDEFINES = $(patsubst %, -D%, $(DEFINES))
 CFLAGS = -Wall -Wextra -Werror
 CFLAGS += -I $(INCLUDES)
 # CFLAGS += -I $(LIBFT_DIR)/includes
-LDFLAGS = -L $(LIBFT_DIR) -lft -rdynamic
+LDFLAGS = -L $(LIBFT_DIR) -lft
 # LDFLAGS = -L $(LIBFT_DIR) -lftmo
 
 
