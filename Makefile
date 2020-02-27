@@ -6,7 +6,7 @@
 #    By: bleplat <marvin@42.fr>                     +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2018/11/07 09:05:04 by bleplat           #+#    #+#              #
-#    Updated: 2020/02/21 15:08:56 by bleplat          ###   ########.fr        #
+#    Updated: 2020/02/27 18:23:17 by bleplat          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -384,6 +384,7 @@ clean:
 	rm -f $(OBJ)
 	rm -rf $(OBJ_DEMO)
 	rm -f $(OBJ_DIR)/*.o
+	rmdir $(OBJ_DIR)/demo || true
 	rmdir $(OBJ_DIR) || true
 	@printf "\e[0m" || true
 
