@@ -6,7 +6,7 @@
 /*   By: bleplat <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/07 10:59:30 by bleplat           #+#    #+#             */
-/*   Updated: 2020/02/17 19:58:13 by bleplat          ###   ########.fr       */
+/*   Updated: 2020/02/28 14:04:21 by bleplat          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -158,6 +158,7 @@ void			ft_intsrot(int *array, int count, int rotation);
 ** C o n v e r t i o n
 */
 
+int				ft_atoi32checkc(int *out, const char *str, char end);
 int				ft_atoi32check(int *out, const char *str);
 char			*ft_lltoa(long long int n);
 char			*ft_ulltoa_basestr(unsigned long long int n, char *base_str);

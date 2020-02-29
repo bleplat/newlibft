@@ -6,7 +6,7 @@
 #    By: bleplat <marvin@42.fr>                     +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2018/11/07 09:05:04 by bleplat           #+#    #+#              #
-#    Updated: 2020/02/27 18:23:17 by bleplat          ###   ########.fr        #
+#    Updated: 2020/02/29 18:51:52 by bleplat          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -449,3 +449,4 @@ ftmo_help:
 	@printf "\e[0mOn Mac:   \e[97m DYLD_FORCE_FLAT_NAMESPACE=1 ; DYLD_INSERT_LIBRARIES=libftmo.so ; ./a.out\n" || true
 	@printf "\e[0mYou should also be alble to link your program with \e[97m-lftmo\n"
 	@printf "\e[0mCompiling your program with -rdynamic will enable call stack informations (static functions will not be seen by ftmo)." || true
+	@printf "\e[0m/!\\Do not use FTMO when using Valgrind or Leaks, or you will see false positives!" || true

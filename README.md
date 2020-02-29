@@ -11,6 +11,8 @@ LibftMO to detect memory leaks.
 - You can see the call stack from when the malloc was done.
 - You can also force the mallocs you want to fail, using environnement variables.
 - Test incredible scenarios durring defenses MOUHAHAHAHAHA.
+*/!\Do not use Valgring/leaks at the same time you're using LFTMO or you may get false positives!*
+
 LibftMo does not depend on Libft. Do 'make ftmo\_help' for details.
 
 # Demo files

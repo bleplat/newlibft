@@ -3,7 +3,6 @@
 /.tmp/
 /trash/
 /.trash/
-/*/demo/
 TODO
 *.log
 /demo/*.demo

@@ -6,7 +6,7 @@
 /*   By: bleplat <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/07 11:51:15 by bleplat           #+#    #+#             */
-/*   Updated: 2019/03/10 21:56:28 by bleplat          ###   ########.fr       */
+/*   Updated: 2020/02/28 14:00:54 by bleplat          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,13 +21,10 @@ static int	ft_atoi32check_p2(int *out, long long total)
 }
 
 /*
-** Read an int as ft_atoi, but return 0 on success, and a negative value if the
-** string is not a valid int32.
-** Return -1 on invalid character.
-** Return -2 on out of integer limits.
+** Same as dt_atoi32check() but count a char as a valid end of integer.
 */
 
-int			ft_atoi32check(int *out, const char *str)
+int			ft_atoi32checkc(int *out, const char *str, char end)
 {
 	int				i;
 	long long		sign;
@@ -43,7 +40,7 @@ int			ft_atoi32check(int *out, const char *str)
 	total = 0;
 	if (str[i] == '\0')
 		return (-1);
-	while (str[i] != '\0')
+	while (str[i] != end)
 	{
 		if (!ft_isdigit(str[i]))
 			return (-1);
@@ -53,4 +50,16 @@ int			ft_atoi32check(int *out, const char *str)
 		i++;
 	}
 	return (ft_atoi32check_p2(out, total * sign));
+}
+
+/*
+** Read an int as ft_atoi, but return 0 on success, and a negative value if the
+** string is not a valid int32.
+** Return -1 on invalid character.
+** Return -2 on out of integer limits.
+*/
+
+int			ft_atoi32check(int *out, const char *str)
+{
+	return (ft_atoi32checkc(out, str, '\0'));
 }
