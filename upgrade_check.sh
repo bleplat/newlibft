@@ -6,7 +6,7 @@
 #    By: bleplat <bleplat@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2020/03/01 17:05:03 by bleplat           #+#    #+#              #
-#    Updated: 2020/03/01 17:21:32 by bleplat          ###   ########.fr        #
+#    Updated: 2020/03/01 17:22:57 by bleplat          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -22,6 +22,7 @@ else
 	if [ "$answer" = "y" ]; then
 		printf "\e[35mUpgrading...\e[0m\n"
 		git pull
+		printf "\e[35mDone.\e[0m\n"
 	else
 		printf "\e[35mNot upgrading...\e[0m\n"
 	fi
