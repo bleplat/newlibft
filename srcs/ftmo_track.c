@@ -6,7 +6,7 @@
 /*   By: bleplat <bleplat@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/02/13 22:36:12 by bleplat           #+#    #+#             */
-/*   Updated: 2020/02/15 00:21:07 by bleplat          ###   ########.fr       */
+/*   Updated: 2020/03/01 16:31:52 by bleplat          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -50,6 +50,7 @@ static int		dofree(t_ftmo_region *regs, long *count, void *ptr)
 	{
 		if (regs[i_reg].ptr == ptr)
 		{
+			ftmo_libc_free(regs[i_reg].calltree);
 			move_regions(&regs[i_reg], &regs[i_reg + 1], (*count) - i_reg - 1);
 			(*count)--;
 			return (0);
