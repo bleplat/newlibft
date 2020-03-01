@@ -6,7 +6,7 @@
 /*   By: bleplat <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/07 10:59:30 by bleplat           #+#    #+#             */
-/*   Updated: 2020/02/28 14:04:21 by bleplat          ###   ########.fr       */
+/*   Updated: 2020/03/01 16:05:20 by bleplat          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -196,6 +196,7 @@ int				ft_strpopnls(char *str);
 int				ft_putstrvec(const char **vec, int count, const char *sep);
 int				ft_dputstrvec(int fd, const char **vec,
 								int count, const char *sep);
+int				ft_isstrprint(const char *str);
 
 /*
 ** U n i c o d e

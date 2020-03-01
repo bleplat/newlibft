@@ -6,7 +6,7 @@
 #    By: bleplat <marvin@42.fr>                     +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2018/11/07 09:05:04 by bleplat           #+#    #+#              #
-#    Updated: 2020/02/29 18:51:52 by bleplat          ###   ########.fr        #
+#    Updated: 2020/03/01 16:05:42 by bleplat          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -158,6 +158,7 @@ FNT_1 =		ft_welcome.c \
 			ft_putwstr_fd.c \
 			ft_wstrlen.c \
 			ft_isstrnum.c \
+			ft_isstrprint.c \
 			ft_strbegins.c \
 			ft_strends.c \
 			ft_lstpop.c \
