@@ -6,12 +6,12 @@
 #    By: bleplat <bleplat@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2020/03/01 17:05:03 by bleplat           #+#    #+#              #
-#    Updated: 2020/03/01 17:27:15 by bleplat          ###   ########.fr        #
+#    Updated: 2020/03/01 17:28:19 by bleplat          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 # Update
-git remote update > /dev/null
+git remote update 1> /dev/null
 
 # Upgrade
 if [ -z "$(git status | grep 'branch is behind')" ]; then
