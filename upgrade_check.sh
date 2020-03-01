@@ -6,7 +6,7 @@
 #    By: bleplat <bleplat@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2020/03/01 17:05:03 by bleplat           #+#    #+#              #
-#    Updated: 2020/03/01 17:23:53 by bleplat          ###   ########.fr        #
+#    Updated: 2020/03/01 17:27:15 by bleplat          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -17,7 +17,9 @@ git remote update > /dev/null
 if [ -z "$(git status | grep 'branch is behind')" ]; then
 	printf "\e[35mUp to date.\e[0m\n"
 else
-	printf "\e[35mNew version available!\e[0m\n"
+	printf "\e[95m  / \\       \e[0m\n"
+	printf "\e[95m / | \\      \e[35mNew version available!\e[0m\n"
+	printf "\e[95m/  .  \\     \e[0m\n"
 	read -p "Do you want to upgrade now? [y/N]" answer
 	if [ "$answer" = "y" ]; then
 		printf "\e[35mUpgrading...\e[0m\n"
