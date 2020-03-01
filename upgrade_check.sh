@@ -6,7 +6,7 @@
 #    By: bleplat <bleplat@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2020/03/01 17:05:03 by bleplat           #+#    #+#              #
-#    Updated: 2020/03/01 17:32:06 by bleplat          ###   ########.fr        #
+#    Updated: 2020/03/01 17:35:28 by bleplat          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -19,9 +19,9 @@ if [ -z "$(git status | grep 'branch is behind')" ]; then
 	printf "\e[35mUp to date!\e[0m\n"
 else
 	printf "\n"
-	printf "\e[95m     / \\                                      / \\   \e[0m\n"
-	printf "\e[95m    / | \\    \e[35mNEW VERSION AVAILABLE!    / | \\  \e[0m\n"
-	printf "\e[95m   /  .  \\                                  /  .  \\ \e[0m\n"
+	printf "\e[1m\e[95m     / \\     \e[35m                      \e[95m      / \\   \e[0m\n"
+	printf "\e[1m\e[95m    / | \\    \e[35mNEW VERSION AVAILABLE!\e[95m     / | \\  \e[0m\n"
+	printf "\e[1m\e[95m   /  .  \\   \e[35m                      \e[95m    /  .  \\ \e[0m\n"
 	printf "\n"
 	read -p "Do you want to upgrade now? [y/N]" answer
 	if [ "$answer" = "y" ]; then
