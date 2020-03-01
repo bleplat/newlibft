@@ -6,7 +6,7 @@
 #    By: bleplat <bleplat@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2020/03/01 17:05:03 by bleplat           #+#    #+#              #
-#    Updated: 2020/03/01 17:31:40 by bleplat          ###   ########.fr        #
+#    Updated: 2020/03/01 17:32:06 by bleplat          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -16,7 +16,7 @@ git remote update 1> /dev/null
 
 # Upgrade
 if [ -z "$(git status | grep 'branch is behind')" ]; then
-	printf "\e[35mUp to date.\e[0m\n"
+	printf "\e[35mUp to date!\e[0m\n"
 else
 	printf "\n"
 	printf "\e[95m     / \\                                      / \\   \e[0m\n"
