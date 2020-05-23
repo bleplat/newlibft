@@ -22,6 +22,8 @@
 ** On error, return -1 and set errno.
 */
 
+#ifdef __APPLE__
+
 int				ft_listxattr(char **out, const char *path, int options)
 {
 	int			len;
@@ -45,3 +47,9 @@ int				ft_listxattr(char **out, const char *path, int options)
 	}
 	return (len);
 }
+
+#else
+
+# pragma message ("ft_listxattr() unavailable!")
+
+#endif

@@ -38,6 +38,8 @@
 # define FT_READTONL_MALLOC_FAILED -3
 # define FT_READTONL_LINE_TOO_LONG -2
 
+# define FT_READB_SIZE 32000
+
 /*
 ** L i b f t   P a r t   I
 */
@@ -287,6 +289,7 @@ int				ft_goodbye(void);
 const void		*ft_pushpop(const void *to_push);
 int				ft_pause(void);
 int				ft_readtonl(int fd, char **p_dst, int max_line_size);
+int				ft_readb(int fd, char *buffer, size_t count);
 const char		*ft_cstrmonth(int month);
 void			ft_clear(void);
 void			ft_store_main_args(int *argc, char ***argv, char ***envp);

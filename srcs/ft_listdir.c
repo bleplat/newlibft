@@ -15,6 +15,8 @@
 
 #include "libft.h"
 
+#ifdef __APPLE__
+
 static char		*ft_direntryname(struct dirent *entry)
 {
 	char		*rst;
@@ -91,3 +93,9 @@ int				ft_listdir(char ***out, const char *dir)
 		return (-1);
 	return (result);
 }
+
+#else
+
+# pragma message ("ft_listdir.c disabled!")
+
+#endif

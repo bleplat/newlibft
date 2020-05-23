@@ -45,7 +45,7 @@ t_ftmo_region					ftmo_make_reg(int index, void *ptr, size_t sz)
 	reg.ptr = ptr;
 	reg.size = sz;
 	reg.calltree = NULL;
-	if (index != -1 && sz >= 0)
+	if (index != -1 && sz > 0)
 	{
 		nfuncs = backtrace(funcs, FTMO_BACKTRACE_COUNT);
 		if (nfuncs >= 2)

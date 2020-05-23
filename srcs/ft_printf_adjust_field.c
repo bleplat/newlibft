@@ -42,6 +42,8 @@ char		get_field_c(t_printf_rstpart *p)
 ** Resize *str and padd with zeros or spaces according to field_options,
 ** to fit in a string at least of size 'fieldw'.
 ** Return count of chars added to the string.
+**
+** // TODO: verify change made at & p->fmt->fieldw > 0
 */
 
 int			ft_printf_adjust_field(t_printf_rstpart *p)
@@ -59,7 +61,7 @@ int			ft_printf_adjust_field(t_printf_rstpart *p)
 		return (0);
 	if ((p->fmt->fieldw < 0 && -p->fmt->fieldw <= prev_len))
 		return (0);
-	if (p->fmt->options & FT_PRINTF_OPTION_LEFT_ALIGN & p->fmt->fieldw > 0)
+	if (p->fmt->options & FT_PRINTF_OPTION_LEFT_ALIGN && p->fmt->fieldw > 0)
 		p->fmt->fieldw *= -1;
 	field_c = get_field_c(p);
 	if (!(new_str = ft_strminfieldc(p->str, p->fmt->fieldw, field_c)))

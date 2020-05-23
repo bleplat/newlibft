@@ -14,6 +14,13 @@
 
 #include "libft.h"
 
+/*
+** NOT AVAILABLE ON LINUX:
+**
+** else if (mode & S_IFWHT)
+**    str[0] = 'w';
+*/
+
 static void		fill_entry_type(mode_t mode, char *str)
 {
 	if (mode & S_IFIFO)
@@ -30,8 +37,6 @@ static void		fill_entry_type(mode_t mode, char *str)
 		str[0] = 'l';
 	else if (mode & S_IFSOCK)
 		str[0] = 's';
-	else if (mode & S_IFWHT)
-		str[0] = 'w';
 	else
 		str[0] = '?';
 }

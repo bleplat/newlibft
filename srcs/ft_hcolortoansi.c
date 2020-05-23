@@ -55,23 +55,23 @@ static int				effect(char **cur)
 
 	last = *cur;
 	if ((*cur += ft_alnumpop(*cur, "eoc")) - last)
-		return ((int)(1 + (*cur = ft_strdup("\e[0m"))));
+		return ((long)(1 + (*cur = ft_strdup("\e[0m"))));
 	if ((*cur += ft_alnumpop(*cur, "reset")) - last)
-		return ((int)(1 + (*cur = ft_strdup("\e[0m"))));
+		return ((long)(1 + (*cur = ft_strdup("\e[0m"))));
 	if ((*cur += ft_alnumpop(*cur, "normal")) - last)
-		return ((int)(1 + (*cur = ft_strdup("\e[21m\e[23m\e[24m\e[29"))));
+		return ((long)(1 + (*cur = ft_strdup("\e[21m\e[23m\e[24m\e[29"))));
 	if ((*cur += ft_alnumpop(*cur, "bold")) - last)
-		return ((int)(1 + (*cur = ft_strdup("\e[1m"))));
+		return ((long)(1 + (*cur = ft_strdup("\e[1m"))));
 	if ((*cur += ft_alnumpop(*cur, "dim")) - last)
-		return ((int)(1 + (*cur = ft_strdup("\e[2m"))));
+		return ((long)(1 + (*cur = ft_strdup("\e[2m"))));
 	if ((*cur += ft_alnumpop(*cur, "italic")) - last)
-		return ((int)(1 + (*cur = ft_strdup("\e[3m"))));
+		return ((long)(1 + (*cur = ft_strdup("\e[3m"))));
 	if ((*cur += ft_alnumpop(*cur, "underline")) - last)
-		return ((int)(1 + (*cur = ft_strdup("\e[4m"))));
+		return ((long)(1 + (*cur = ft_strdup("\e[4m"))));
 	if ((*cur += ft_alnumpop(*cur, "strike")) - last)
-		return ((int)(1 + (*cur = ft_strdup("\e[9m"))));
+		return ((long)(1 + (*cur = ft_strdup("\e[9m"))));
 	if ((*cur += ft_alnumpop(*cur, "strikeout")) - last)
-		return ((int)(1 + (*cur = ft_strdup("\e[9m"))));
+		return ((long)(1 + (*cur = ft_strdup("\e[9m"))));
 	return (0);
 }
 
@@ -82,11 +82,9 @@ static int				effect(char **cur)
 
 static int				single(int *color, int *flags, char **cur)
 {
-	int			rst;
 	char		*last;
 
 	last = *cur;
-	rst = 0;
 	if (effect(cur))
 		return (1);
 	else if ((*cur += ft_alnumpop(*cur, "back")) - last)

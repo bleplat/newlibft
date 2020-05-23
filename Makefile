@@ -15,7 +15,7 @@
 ###########################
 
 NAME_1  =   libft.a
-NAME_2  =   libftmo.so
+NAME_2  =   libftmo.a
 NAME    =   $(NAME_1)_$(NAME_2)_demos
 ALL_NAMES = $(NAME_1) $(NAME_2) demos
 
@@ -260,6 +260,7 @@ FNT_1 =		ft_welcome.c \
 			ft_printf_rstparts_fuse.c \
 			ft_printf_rstparts_clean.c \
 			ft_goodbye.c \
+			ft_readb.c
 
 FNT_2 =		ftmo_malloc.c \
 			ftmo_free.c \
@@ -337,6 +338,7 @@ CDEFINES = $(patsubst %, -D%, $(DEFINES))
 
 CFLAGS = -Wall -Wextra -Werror
 CFLAGS += -I $(INCLUDES)
+CFLAGS += -fPIC
 # CFLAGS += -I $(LIBFT_DIR)/includes
 LDFLAGS = -L $(LIBFT_DIR) -lft
 # LDFLAGS = -L $(LIBFT_DIR) -lftmo
@@ -370,8 +372,8 @@ optimized: CFLAGS += -o3
 optimized: all
 
 .PHONY: debug
-optimized: LDFLAGS += -L. -lftmo -rdynamic
-optimized: all
+debug: LDFLAGS += -L. -lftmo -rdynamic
+debug: all
 
 .PHONY: $(NAME)
 $(NAME): $(ALL_NAMES)
@@ -384,8 +386,10 @@ $(NAME_1): $(OBJ_C) $(OBJ_1)
 
 $(NAME_2): $(OBJ_C) $(OBJ_2)
 	@printf "\e[92m" || true
-	$(CC) $(CFLAGS) -shared -o $@ $^
-	chmod -x $@ || true
+	ar rc $(NAME_2) $(OBJ_2)
+	#$(CC) $(CFLAGS) -shared -o $@ $^
+	#$(CC) $(CFLAGS)  -o $@ $^
+	#chmod -x $@ || true
 	@printf "\e[0m" || true
 	make ftmo_help
 
