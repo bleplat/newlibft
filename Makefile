@@ -291,7 +291,6 @@ FNT_DEMO =	ft_allocs_demo \
 			ft_hrbyte_demo \
 			ft_ints_demo \
 			ft_linkfolow_demo \
-			ft_listdir_demo \
 			ft_mixcolors_demo \
 			ft_printf_bonus_list \
 			ft_printf_demo_8ints \
@@ -345,7 +344,7 @@ LDFLAGS = -L $(LIBFT_DIR) -lft
 
 
 ###########################
-###      R U L E S      ###
+### M A I N   R U L E S ###
 ###########################
 
 .PHONY: upgrade_and_all
@@ -353,27 +352,6 @@ upgrade_and_all: upgrade all
 
 .PHONY: all
 all: $(NAME)
-
-.PHONY: update
-update:
-	@printf "\e[95m" || true
-	@git remote update || true
-	@git status -uno
-	@printf "\e[0m" || true
-
-.PHONY: upgrade
-upgrade:
-	@printf "\e[95m" || true
-	@sh upgrade_check.sh
-	@printf "\e[0m" || true
-
-.PHONY: optimized
-optimized: CFLAGS += -o3
-optimized: all
-
-.PHONY: debug
-debug: LDFLAGS += -L. -lftmo -rdynamic
-debug: all
 
 .PHONY: $(NAME)
 $(NAME): $(ALL_NAMES)
@@ -423,6 +401,33 @@ fclean: clean
 .PHONY: re
 re: fclean all
 	@printf "\e[0m" || true
+
+
+
+###########################
+### M O R E   R U L E S ###
+###########################
+
+.PHONY: update
+update:
+	@printf "\e[95m" || true
+	@git remote update || true
+	@git status -uno
+	@printf "\e[0m" || true
+
+.PHONY: upgrade
+upgrade:
+	@printf "\e[95m" || true
+	@sh upgrade_check.sh
+	@printf "\e[0m" || true
+
+.PHONY: optimized
+optimized: CFLAGS += -o3
+optimized: all
+
+.PHONY: debug
+debug: LDFLAGS += -L. -lftmo -rdynamic
+debug: all
 
 .PHONY: delete_libs_gits
 delete_libs_gits:
