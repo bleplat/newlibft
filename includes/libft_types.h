@@ -54,6 +54,7 @@ typedef long double							t_llf;
 ** O t h e r
 */
 
+typedef int									t_bool;
 typedef struct stat							t_stat;
 typedef char								*t_lscolors;
 
