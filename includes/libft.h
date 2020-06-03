@@ -168,6 +168,11 @@ char			*ft_ldtoa(long double d, unsigned int precision);
 int				ft_ldspecial(long double d, char **may_out);
 void			ft_hrbytes(char *buf5b, long long int bytes);
 
+int32_t			ft_bigendian32_read(unsigned char *data32);
+void			ft_bigendian32_write(unsigned char *data32, int32_t int32);
+int16_t			ft_bigendian16_read(unsigned char *data16);
+void			ft_bigendian16_write(unsigned char *data16, int16_t int16);
+
 /*
 ** S t r i n g s
 */

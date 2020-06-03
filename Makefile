@@ -260,7 +260,9 @@ FNT_1 =		ft_welcome.c \
 			ft_printf_rstparts_fuse.c \
 			ft_printf_rstparts_clean.c \
 			ft_goodbye.c \
-			ft_readb.c
+			ft_readb.c \
+			ft_bigendian32.c \
+			ft_bigendian16.c \
 
 FNT_2 =		ftmo_malloc.c \
 			ftmo_free.c \
