@@ -6,7 +6,7 @@
 #    By: bleplat <marvin@42.fr>                     +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2018/11/07 09:05:04 by bleplat           #+#    #+#              #
-#    Updated: 2020/03/01 17:16:28 by bleplat          ###   ########.fr        #
+#    Updated: 2020/06/08 15:54:07 by amalsago         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -41,7 +41,6 @@ FNT_1 =		ft_welcome.c \
 			ft_intsrot.c \
 			ft_hrbytes.c \
 			ft_listxattr.c \
-			ft_filecolor.c \
 			ft_lscolors.c \
 			ft_linkfolow.c \
 			ft_strpopslashes.c \
@@ -263,6 +262,9 @@ FNT_1 =		ft_welcome.c \
 			ft_readb.c \
 			ft_bigendian32.c \
 			ft_bigendian16.c \
+			ft_strcspn.c \
+			ft_strspn.c \
+			ft_strtok.c \
 
 FNT_2 =		ftmo_malloc.c \
 			ftmo_free.c \
@@ -283,7 +285,6 @@ FNT_2 =		ftmo_malloc.c \
 			ft_strstr.c \
 			ft_strnstr.c \
 			ft_memmove.c \
-
 
 FNT = $(FNT_1) $(FNT_2)
 
@@ -326,7 +327,6 @@ OBJ_2 = $(patsubst %, $(OBJ_DIR)/%.o, $(FNT_2))
 SRC_DEMO = $(patsubst %, $(DEMO_DIR)/%.c, $(FNT_DEMO))
 OBJ_DEMO = $(patsubst %, $(OBJ_DIR)/$(DEMO_DIR)/%.o, $(FNT_DEMO))
 DEMO     = $(patsubst %, $(DEMO_DIR)/%.demo, $(FNT_DEMO))
-
 
 ###########################
 ###   C O M P I L E R   ###
@@ -428,7 +428,7 @@ optimized: CFLAGS += -o3
 optimized: all
 
 .PHONY: debug
-debug: LDFLAGS += -L. -lftmo -rdynamic
+debug: LDFLAGS += -L. -lftmo -rdynamic -ldl
 debug: all
 
 .PHONY: delete_libs_gits

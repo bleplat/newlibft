@@ -6,7 +6,7 @@
 /*   By: bleplat <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/07 10:59:30 by bleplat           #+#    #+#             */
-/*   Updated: 2020/03/01 16:05:20 by bleplat          ###   ########.fr       */
+/*   Updated: 2020/06/08 15:54:27 by amalsago         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -204,6 +204,9 @@ int				ft_putstrvec(const char **vec, int count, const char *sep);
 int				ft_dputstrvec(int fd, const char **vec,
 								int count, const char *sep);
 int				ft_isstrprint(const char *str);
+size_t			ft_strcspn(const char *s, const char *charset);
+size_t			ft_strspn(const char *s, const char *charset);
+char			*ft_strtok(char *str, const char *sep);
 
 /*
 ** U n i c o d e

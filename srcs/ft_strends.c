@@ -12,6 +12,10 @@
 
 #include "libft.h"
 
+/*
+** Tell if a string ends with another.
+*/
+
 int		ft_strends(const char *s1, const char *s2)
 {
 	int		len1;

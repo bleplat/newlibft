@@ -18,7 +18,7 @@ int16_t			ft_bigendian16_read(unsigned char *data16)
 ** Write an int16 to a byte array encoded in big endian.
 */
 
-void			ft_bigendian32_write(unsigned char *data16, int16_t int16)
+void			ft_bigendian16_write(unsigned char *data16, int16_t int16)
 {
 	data16[1] = (int16 >> 0) & 0xFF;
 	data16[0] = (int16 >> 8) & 0xFF;
