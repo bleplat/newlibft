@@ -1,37 +1,32 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strtok.c                                        :+:      :+:    :+:   */
+/*   ft_strclen.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: amalsago <amalsago@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/10/23 11:00:36 by amalsago          #+#    #+#             */
-/*   Updated: 2019/12/22 06:12:21 by amalsago         ###   ########.fr       */
+/*   Created: 2019/11/26 11:55:55 by amalsago          #+#    #+#             */
+/*   Updated: 2020/06/15 19:29:28 by amalsago         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
+static int		ft_isseparator(char c, char separator)
+{
+	return (c == separator);
+}
+
 /*
-** Split the string str into tokens separated by characters in sep.
+** Computes and returns the length of the string s until separator c.
 */
 
-char				*ft_strtok(char *str, const char *sep)
+size_t			ft_strclen(const char *s, char c)
 {
-	static char		*static_str;
-	int				i;
+	size_t		i;
 
-	if (str == NULL && static_str != NULL)
-		str = static_str;
-	if (str)
-	{
-		i = ft_strcspn(str, sep);
-		str = str + i;
-		static_str = str + ft_strspn(str, sep);
-		if (*static_str == '\0')
-			static_str = NULL;
-		*str = '\0';
-		return (str - i);
-	}
-	return (NULL);
+	i = 0;
+	while (s[i] != '\0' && !(ft_isseparator(s[i], c)))
+		i++;
+	return (i);
 }

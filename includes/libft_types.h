@@ -59,7 +59,7 @@ typedef int									t_bool;
 typedef struct stat							t_stat;
 typedef char								*t_lscolors;
 
-# define false	0
-# define true	1
+# define FALSE	0
+# define TRUE	1
 
 #endif
