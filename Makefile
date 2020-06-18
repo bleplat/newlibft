@@ -74,6 +74,7 @@ FNT_1 =		ft_welcome.c \
 			ft_swapint.c \
 			ft_swapptr.c \
 			ft_atoi.c \
+			ft_atoi00check.c \
 			ft_atoi32check.c \
 			ft_bzero.c \
 			ft_isalnum.c \

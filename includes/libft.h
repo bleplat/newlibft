@@ -163,6 +163,8 @@ void			ft_intsrot(int *array, int count, int rotation);
 
 int				ft_atoi32checkc(int *out, const char *str, char end);
 int				ft_atoi32check(int *out, const char *str);
+int				ft_atoi00checkc(int *out, const char *str, char end);
+int				ft_atoi00check(int *out, const char *str);
 char			*ft_lltoa(long long int n);
 char			*ft_ulltoa_basestr(unsigned long long int n, char *base_str);
 char			*ft_ldtoa(long double d, unsigned int precision);
